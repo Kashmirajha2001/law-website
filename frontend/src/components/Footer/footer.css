@@ -24,7 +24,7 @@
 }
 
 .logoFooter h2 span {
-    color: orangered;
+    color: var(--color-primary);
 }
 
 @media (max-width: 1000px) {
@@ -62,7 +62,7 @@
 }
 
 .footerLink:hover {
-    color: coral;
+    color: var(--color-primary);
     transition: 200ms ease-in;
 }
 

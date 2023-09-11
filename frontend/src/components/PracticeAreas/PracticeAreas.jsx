@@ -5,7 +5,7 @@ const PracticeAreas = () => {
   return (
     <div className="practiceContent">
         <div className="headingPractice">
-            <h2>Our Practice Areas</h2>
+            <h1>Our Practice Areas</h1>
         </div>
         <div className="descPractice">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, reiciendis?</p>
