@@ -1,0 +1,162 @@
+.footerBox {
+    padding: 25px 0;
+    background: url('../../assets/carousel/c2.png');
+    /* opacity: 0.8; */
+    width: 100%;
+}
+
+.logoFooter {
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    padding: 0 0 30px;
+}
+
+.logoFooter img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+}
+
+.logoFooter h2 {
+    color: #FFFFFF;
+    padding-left: 10px;
+}
+
+.logoFooter h2 span {
+    color: orangered;
+}
+
+@media (max-width: 1000px) {
+    .footerBox {
+        padding: 70px 30px;
+    }
+
+    .row {
+        grid-template-columns: repeat(auto-fill,
+                minmax(200px, 1fr));
+    }
+}
+
+
+.containerFooter {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 3rem;
+    margin: 0 6vw;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    /* width: 48vw; */
+}
+
+.footerLink {
+    color: #fff;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.footerLink:hover {
+    color: coral;
+    transition: 200ms ease-in;
+}
+
+.heading {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.copyRight{
+    padding: 2vw;
+    color: #FFFFFF;
+}
+
+/* .footerBox{
+    padding: 25px 0;
+background: black;
+position: absolute;
+bottom: 0;
+width: 100%;
+}
+
+.logoFooter {
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    padding: 0 0 30px;
+}
+
+.logoFooter img{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+}
+
+.logoFooter h2{
+    color: #FFFFFF;
+    padding-left: 10px;
+}
+
+.logoFooter h2 span{
+    color: orangered;
+}
+
+@media (max-width: 1000px) {
+    .footerBox{
+        padding: 70px 30px;
+    }
+    .row{
+        grid-template-columns: repeat(auto-fill,
+						minmax(200px, 1fr));
+    }
+}
+
+
+.containerFooter {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	max-width: 1000px;
+	margin: 0 auto;
+	background: red;
+    margin: 0 6vw;
+}
+
+.column{
+display: flex;
+flex-direction: column;
+text-align: left;
+margin-left: 60px;
+}
+
+.row {
+display: grid;
+grid-template-columns: repeat(auto-fill,
+						minmax(185px, 1fr));
+grid-gap: 20px;
+}
+
+.footerLink {
+color: #fff;
+margin-bottom: 10px;
+font-size: 16px;
+}
+
+.footerLink:hover {
+	color: coral;
+	transition: 200ms ease-in;
+}
+
+.heading {
+font-size: 24px;
+color: #fff;
+margin-bottom: 40px;
+font-weight: bold;
+} */
