@@ -6,7 +6,8 @@
 
 .headingPractice{
     text-align: center;
-    color: orangered;
+    color: var(--color-primary-variant);
+    font-weight: bolder;
 }
 
 .descPractice{
@@ -29,7 +30,7 @@
 }
 
 .about_card:hover{
-    background: transparent;
+    background: var(--color-primary-variant);
     border-color: orangered;
     cursor: default;
 }
@@ -44,10 +45,5 @@
 }
 .about_card small{
     font-size: 0.9rem;
-    color: #ffffff68;
-}
-
-.about_content p{
-    margin: 2rem 0 2.6rem;
-    color: #ffffff68;
+    color: #ffffffad;
 }
