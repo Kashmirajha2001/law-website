@@ -1,6 +1,7 @@
 import { React, useState } from "react";
 import Hamburger from "../../assets/hamburger.svg";
 import "./nav.css";
+// import login from '../Login/login'
 
 const Nav = () => {
   const [showNavbar, setShowNavbar] = useState(false);
@@ -12,7 +13,7 @@ const Nav = () => {
   return (
     <nav className="navbar">
       <div className="container">
-        <div className="menu-icon" onClick={handleShowNavbar}>
+        <div className="menu-icon" onClick={handleShowNavbar} >
           <img src={Hamburger} alt="" />
         </div>
         <div className={`nav-elements  ${showNavbar && "active"}`}>
@@ -33,7 +34,7 @@ const Nav = () => {
               <a href="">Contact Us</a>
             </li>
             <li>
-              <a href="">login</a>
+              <a href="../Login/login.jsx">login</a>
             </li>
             <li>
               <a href="">SignUp</a>

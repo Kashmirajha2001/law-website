@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <div className="footerBox">
       <div className="containerFooter">
-        <div className="row" style={{"padding-right":"2rem",}}>
+        <div className="row" style={{ "padding-right": "2rem" }}>
           <div className="column">
             <div className="logoFooter">
               <img src={img}></img>
@@ -17,21 +17,21 @@ const Footer = () => {
                 e-nyaya<span>Seva</span>
               </h2>
             </div>
-            <a className="footerLink">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus a id officiis quod facilis molestias corporis optio exercitationem! Est, voluptas!
+            <a className="footerLink">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus
+              a id officiis quod facilis molestias corporis optio
+              exercitationem! Est, voluptas!
             </a>
-            <a className="footerLink"><ImLocation
-            className="a"
-          />
+            <a className="footerLink">
+              <ImLocation className="a" />
               Behala, MR Street
             </a>
-            <a className="footerLink"><IoMdCall
-            className="a"
-          />
+            <a className="footerLink">
+              <IoMdCall className="a" />
               9876543210
             </a>
-            <a className="footerLink"><FiMail
-            className="a"
-          />
+            <a className="footerLink">
+              <FiMail className="a" />
               enyayseva@gmail.com
             </a>
           </div>
@@ -55,7 +55,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="row">
-        <div className="column">
+          <div className="column">
             <p className="heading">Our Practice Areas</p>
             <a className="footerLink" href="#">
               Civil Litigation
@@ -85,7 +85,7 @@ const Footer = () => {
               Instagram
             </a>
             <a className="footerLink" href="#">
-             Twitter
+              Twitter
             </a>
             <a className="footerLink" href="#">
               Youtube
@@ -95,7 +95,9 @@ const Footer = () => {
       </div>
       <div className="copyRight">
         <hr />
-        <p>Copyrights 2023 <span>e-nyayaSeva Pvt. Ltd</span>.All rights reserved</p>
+        <p>
+          Copyrights 2023 <span>e-nyayaSeva Pvt. Ltd</span>.All rights reserved
+        </p>
       </div>
     </div>
   );

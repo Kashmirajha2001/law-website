@@ -5,6 +5,8 @@ import Intro from './components/Intro/Intro';
 import Carousel from './components/Carousel/Carousel';
 import Footer from './components/Footer/Footer';
 import PracticeAreas from './components/PracticeAreas/PracticeAreas';
+// import Login from './components/Login/login';
+// import Chat from './components/Chat/Chat';
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
       <Carousel/>
       <PracticeAreas/>
       <Footer/>
+      {/* <Login/> */}
+      {/* <Chat/> */}
     </>
   );
 }
