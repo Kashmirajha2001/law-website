@@ -4,6 +4,9 @@ import img from "../../assets/logo.png";
 import { ImLocation } from "react-icons/Im";
 import { IoMdCall } from "react-icons/Io";
 import { FiMail } from "react-icons/Fi";
+import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 const Footer = () => {
   return (
@@ -23,15 +26,15 @@ const Footer = () => {
               exercitationem! Est, voluptas!
             </a>
             <a className="footerLink">
-              <ImLocation className="a" />
+              <ImLocation className="footericon" />
               Behala, MR Street
             </a>
             <a className="footerLink">
-              <IoMdCall className="a" />
+              <IoMdCall className="footericon" />
               9876543210
             </a>
             <a className="footerLink">
-              <FiMail className="a" />
+              <FiMail className="footericon" />
               enyayseva@gmail.com
             </a>
           </div>
@@ -53,8 +56,6 @@ const Footer = () => {
               Terms and conditions
             </a>
           </div>
-        </div>
-        <div className="row">
           <div className="column">
             <p className="heading">Our Practice Areas</p>
             <a className="footerLink" href="#">
@@ -79,24 +80,62 @@ const Footer = () => {
           <div className="column">
             <p className="heading">Connect With Us</p>
             <a className="footerLink" href="#">
+              <FacebookRoundedIcon className="footericon"/>
               Facebook
             </a>
             <a className="footerLink" href="#">
-              Instagram
-            </a>
-            <a className="footerLink" href="#">
+            <TwitterIcon className="footericon"/>
               Twitter
             </a>
             <a className="footerLink" href="#">
-              Youtube
+            <LinkedInIcon className="footericon"/>
+              LinkedIn
             </a>
           </div>
         </div>
+        {/* <div className="row">
+          <div className="column">
+            <p className="heading">Our Practice Areas</p>
+            <a className="footerLink" href="#">
+              Civil Litigation
+            </a>
+            <a className="footerLink" href="#">
+              Business Taxation
+            </a>
+            <a className="footerLink" href="#">
+              family Law
+            </a>
+            <a className="footerLink" href="#">
+              Education Law
+            </a>
+            <a className="footerLink" href="#">
+              Trade and Finance Law
+            </a>
+            <a className="footerLink" href="#">
+              Accident injuries
+            </a>
+          </div>
+          <div className="column">
+            <p className="heading">Connect With Us</p>
+            <a className="footerLink" href="#">
+              <FacebookRoundedIcon className="footericon"/>
+              Facebook
+            </a>
+            <a className="footerLink" href="#">
+            <TwitterIcon className="footericon"/>
+              Twitter
+            </a>
+            <a className="footerLink" href="#">
+            <LinkedInIcon className="footericon"/>
+              LinkedIn
+            </a>
+          </div>
+        </div> */}
       </div>
       <div className="copyRight">
         <hr />
         <p>
-          Copyrights 2023 <span>e-nyayaSeva Pvt. Ltd</span>.All rights reserved
+          Copyrights © 2023 <span>e-nyayaSeva Pvt. Ltd</span>.All rights reserved
         </p>
       </div>
     </div>
