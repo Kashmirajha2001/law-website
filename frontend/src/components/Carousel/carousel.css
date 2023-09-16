@@ -1,4 +1,5 @@
 .slider-wrapper {
+    margin: 0 5vw;
     position: relative;
     height: 70vh;
     overflow: hidden;
