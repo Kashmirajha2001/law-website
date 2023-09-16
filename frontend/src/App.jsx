@@ -16,6 +16,8 @@ function App() {
       <News/>
       <PracticeAreas/>
       <Footer/>
+      {/* <Login/> */}
+      {/* <Chat/> */}
     </>
   );
 }

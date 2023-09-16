@@ -43,13 +43,13 @@ const content = [
 const Carousel = () => {
   return (
       <div className="box">
-        <Slider className="slider-wrapper">
+        <Slider className="slider-wrapper" autoplay={1000}>
           {content.map((item, index) => (
             <div
               key={index}
               className="slider-content"
               style={{
-                background: `url('${item.image}') no-repeat center center`,
+                background: `url('${item.image}') no-repeat center top`,
               }}
             >
               <span></span>
