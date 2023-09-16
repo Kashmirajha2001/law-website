@@ -1,11 +1,24 @@
 /* Reset some default browser styles */
 body,
 html {
-  margin: 0 30px;
+  margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
   height: 100%;
   background-color: #fef7e5;
+}
+
+:root{
+  --color-primary:orangered;
+  --color-primary-variant:rgb(198, 103, 62);
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+  display:none;
 }
 
 a{
@@ -19,7 +32,7 @@ ul{
 .btn{
   width: max-content;
   display: inline-block;
-  background:rgb(198, 103, 62);
+  background:var(--color-primary-variant);
   color: #ffffff;
   padding: 0.5rem 1rem;
   border-radius: 0.4rem;

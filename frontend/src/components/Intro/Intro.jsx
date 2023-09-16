@@ -1,12 +1,11 @@
 import React from "react";
 import "./intro.css";
-// import AddIcCallIcon from '@mui/icons-material/AddIcCall';
-import { RiContactsBookLine } from "react-icons/Ri";
-import { HiOutlineLocationMarker } from "react-icons/Hi";
-import { LiaFacebook } from "react-icons/Lia";
-import { FiTwitter } from "react-icons/Fi";
-import { CiLinkedin } from "react-icons/Ci";
+import ContactPageIcon from '@mui/icons-material/ContactPage';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
 import img from "../../assets/logo.png";
+import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 const Intro = () => {
   return (
@@ -22,14 +21,14 @@ const Intro = () => {
           <h2>e-nyaya<span>Seva</span></h2>
         </div>
         <div className="contact">
-          <RiContactsBookLine
+          <ContactPageIcon style={{ width: "1.9rem", height: "1.9rem", color:"green"}}
             className="a"
           />
           <h4 className="b">1234567890</h4>
           <span className="c">enyayseva@gmail.com</span>
         </div>
         <div className="address">
-          <HiOutlineLocationMarker
+          <LocationOnIcon style={{ width: "1.9rem", height: "1.9rem", color:"red"}}
             className="a"
           />
           <h4 className="b">Behala</h4>
@@ -38,22 +37,22 @@ const Intro = () => {
         <div className="socials">
           <p>
             <a href="">
-              <LiaFacebook
-                style={{ width: "1.5rem", height: "1.5rem", color: "orangered" }}
+              <FacebookRoundedIcon className="socialIcons"
+                style={{ width: "1.5rem", height: "1.5rem"}}
               />
             </a>
           </p>
           <p>
             <a href="">
-              <FiTwitter
-                style={{ width: "1.3rem", height: "1.3rem", color: "orangered" }}
+              <TwitterIcon className="socialIcons"   
+                style={{ width: "1.5rem", height: "1.5rem"}}
               />
             </a>
           </p>
           <p>
             <a href="">
-              <CiLinkedin
-                style={{ width: "1.5rem", height: "1.5rem", color: "orangered" }}
+              <LinkedInIcon className="socialIcons"
+                style={{ width: "1.5rem", height: "1.5rem"}}
               />
             </a>
           </p>

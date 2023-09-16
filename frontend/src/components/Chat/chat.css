@@ -1,0 +1,87 @@
+.chat-bot-container {
+    transition: all 0.4s;
+}
+.chat-icon {
+    position: fixed;
+    z-index: 10;
+    right: 50px;
+    bottom: 40px;
+    width: fit-content;
+    height: fit-content;
+    font-size: 60px;
+    color: aqua;
+    cursor: pointer;
+    /* transition: all 0.3s; */
+}
+.chat-icon:hover {
+    color: bisque;
+}
+.chat-box {
+    width: 400px;
+    height: 400px;
+    background-color: bisque;
+    border-radius: 20px;
+    position: fixed;
+    z-index: 10;
+    right: 40px;
+    bottom: 130px;
+    transition: all 0.4s;
+    align-items: center;
+}
+.chat-box p {
+    font-size: 1.2rem;
+    margin-top:1.5rem;
+    color: black;
+    font-weight: 600;
+    font-family: 'Montserrat', 'sans-serif';
+    text-align: center;
+} 
+.chat-msgs {
+    /* background-color: white; */
+    /* padding: 10px 20px; */
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    overflow-y: auto;
+}
+.chat-msgs::-webkit-scrollbar {
+    background-color: black;
+    width: 100px;
+  }
+.chat-msgs::-webkit-scrollbar-track {
+    background-color: black; /* Change the background color of the scrollbar track */
+  }
+.chat-msgs::-webkit-scrollbar-thumb {
+    background-color: #3498db; /* Change the color of the scrollbar thumb */
+  }
+.user-msg {
+    text-align: right;
+    margin-right: 20px;
+    margin-top: 10px;
+    color: blue;
+}
+.bot-msg {
+    text-align: left;
+    margin-left: 20px;
+    margin-top: 10px;
+    color: green;
+}
+.input-form {
+    width: 100%;
+    text-align: center
+}
+.input-form input {
+    width: 80%;
+    height: 30px;
+    background: transparent;
+    border: 3px solid white;
+    border-radius: 10px;
+    border-color: black;
+}
+.input-form button {
+    background-color: bisque;
+    width: 15%;
+    height: 35px;
+    border-color: black;
+    border-radius: 10px;
+}
