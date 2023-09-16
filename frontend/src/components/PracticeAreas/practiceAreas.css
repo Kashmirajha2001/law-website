@@ -1,6 +1,8 @@
 .practiceContent{
     padding: 3vw;
     background-color: rgb(94, 94, 94);
+    margin: 0rem 5rem;
+    border-radius: 20px;
     /* background: url('../../assets/carousel/c1.png'); */
 }
 

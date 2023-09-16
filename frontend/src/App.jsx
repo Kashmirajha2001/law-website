@@ -7,6 +7,7 @@ import Footer from './components/Footer/Footer';
 import PracticeAreas from './components/PracticeAreas/PracticeAreas';
 import News from './components/News/News';
 import Chat from './components/Chat/Chat';
+import { Justice } from './components/Legal Justice/Justice';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Chat/>
       <Carousel/>
       <News/>
+      <Justice/>
       <PracticeAreas/>
       <Footer/>
       {/* <Login/> */}
