@@ -24,26 +24,14 @@
 }
 
 .logoFooter h2 span {
-    color: orangered;
+    color: var(--color-primary);
 }
 
-@media (max-width: 1000px) {
-    .footerBox {
-        padding: 70px 30px;
-    }
-
-    .row {
-        grid-template-columns: repeat(auto-fill,
-                minmax(200px, 1fr));
-    }
-}
-
-
-.containerFooter {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 3rem;
-    margin: 0 6vw;
+.footericon{
+    padding-right: 10px;
+    color: var(--color-primary);
+    position: relative;
+    top: 5px;
 }
 
 .column {
@@ -52,7 +40,10 @@
 }
 
 .row {
-    /* width: 48vw; */
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 4rem;
+    margin: 0 6vw;
 }
 
 .footerLink {
@@ -62,7 +53,7 @@
 }
 
 .footerLink:hover {
-    color: coral;
+    color: var(--color-primary);
     transition: 200ms ease-in;
 }
 
