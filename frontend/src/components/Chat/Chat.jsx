@@ -5,9 +5,9 @@ import { SiProbot } from 'react-icons/si';
 const Chat = () => {
     const [showDiv, setShowDiv] = useState(false);
     const [userInput, setUserInput] = useState('');
-    const [userMessages, setUserMessages] = useState([]);
-    const [botMessages, setBotMessages] = useState([]);
-    const [isLoading, setIsLoading] = useState(false);
+    const [messages, setMessages] = useState([]);
+    // const [botMessages, setBotMessages] = useState([]);
+    // const [isLoading, setIsLoading] = useState(false);
 
     
     const toggleDiv = () => {
@@ -20,16 +20,16 @@ const Chat = () => {
 
     const handleSendMessage = (e) => {
         e.preventDefault();
-        setUserMessages([...userMessages, userInput]);
+        setMessages([...messages, userInput]);
         setUserInput('');
         simulateBotResponse(userInput);
     }
 
     const simulateBotResponse = (userInput) => {
-        setIsLoading(true);
+        // setIsLoading(true);
         setTimeout(() => {
             const botResponse = `Bot: You said "${userInput}"`;
-            setBotMessages([...botMessages, botResponse]);
+            setMessages([...messages, botResponse]);
             setIsLoading(false);
         }, 1000);
     }
@@ -40,12 +40,12 @@ const Chat = () => {
             <div className='chat-box'>
             <p>How can I Help you ?</p>
             <div className='chat-msgs'>
-                {userMessages.map((userMessage, index) => (
+                {messages.map((message, index) => (
                     <div key={index} className='user-msg'>
-                        <div className='message-content right'>{userMessage}</div>
+                        <div className='message-content right'>{message}</div>
                 </div>
                 ))}
-                {isLoading ? (
+                {/* {isLoading ? (
                     <div className="loading-indicator">Bot is typing...</div>
                 ) : (
                     botMessages.map((message, index) => (
@@ -53,7 +53,7 @@ const Chat = () => {
                             <div className='message-content left'>{message}</div>
                         </div>
                     ))
-                )}
+                )} */}
                 </div>
                     <form className='input-form' onSubmit={handleSendMessage}>
                         <input
@@ -62,7 +62,7 @@ const Chat = () => {
                             value={userInput}
                             onChange={handleUserInput}
                         />
-                        <button type="submit">Send</button>
+                        <button type="submit" className='btn'>Send</button>
                     </form>
                 </div>
         )}

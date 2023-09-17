@@ -18,13 +18,13 @@
 }
 .chat-box {
     width: 400px;
-    height: 400px;
+    height: 450px;
     background-color: bisque;
     border-radius: 20px;
     position: fixed;
-    z-index: 10;
+    z-index: 1000;
     right: 40px;
-    bottom: 130px;
+    bottom: 120px;
     transition: all 0.4s;
     align-items: center;
 }
@@ -37,6 +37,10 @@
     text-align: center;
 } 
 .chat-msgs {
+    display:flex;
+    flex-direction:column;
+    gap:0.5rem;
+    overflow:auto;
     /* background-color: white; */
     /* padding: 10px 20px; */
     width: 100%;
@@ -55,33 +59,37 @@
     background-color: #3498db; /* Change the color of the scrollbar thumb */
   }
 .user-msg {
+    padding: 5px;
     text-align: right;
-    margin-right: 20px;
+    margin: 0 20px;
     margin-top: 10px;
-    color: blue;
+    background-color: white;
+    border-radius: 10px;
 }
 .bot-msg {
-    text-align: left;
-    margin-left: 20px;
+    padding: 5px;
+    margin: 0 20px;
     margin-top: 10px;
-    color: green;
+    background-color: var(--color-primary-variant);
+    color: #FFFF;
+    border-radius: 10px;
+    width: fit-content;
 }
 .input-form {
+    margin-top: 30px;
     width: 100%;
     text-align: center
 }
+
 .input-form input {
-    width: 80%;
+    width: 70%;
     height: 30px;
     background: transparent;
-    border: 3px solid white;
+    border: 3px solid var(--color-primary-variant);
     border-radius: 10px;
-    border-color: black;
+    /* border-color: black; */
 }
+
 .input-form button {
-    background-color: bisque;
-    width: 15%;
-    height: 35px;
-    border-color: black;
-    border-radius: 10px;
+    margin-left: 10px;
 }
