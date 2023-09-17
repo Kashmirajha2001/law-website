@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './news.css';
+import Slider from 'react-animated-slider';
+import 'react-animated-slider/build/horizontal.css';
 
 const News = () => {
   const [newsData, setNewsData] = useState([]);
@@ -19,38 +21,13 @@ const News = () => {
       window.open(url, '_blank');
     };
 
-    const [currentNewsIndex, setCurrentNewsIndex] = useState(0);
-
-    const nextNews = () => {
-      setCurrentNewsIndex((prevIndex) =>
-        prevIndex === newsData.length - 1 ? 0 : prevIndex + 1
-      );
-    };
-  
-    const prevNews = () => {
-      setCurrentNewsIndex((prevIndex) =>
-        prevIndex === 0 ? newsData.length - 1 : prevIndex - 1
-      );
-    };
-
-    const autoScroll = () => {
-      nextNews();
-    };
-    useEffect(() => {
-      const intervalId = setInterval(autoScroll, 5000); // Adjust the interval time (in milliseconds) as needed
-      return () => {
-        clearInterval(intervalId); // Clear the interval when the component unmounts
-      };
-    }, []);
-
   return (
     <div className='news-feed-container'>
       <h1>Latest <span>News</span></h1>
-      <div className='news-contents'>
-          {newsData.map((news, index) => (
-            <div className={`news-card ${
-                index === currentNewsIndex ? 'active' : ''
-              }`}
+      {/* <div className='news-contents'> */}
+      <Slider className="slider" autoplay={1500}>
+        {newsData.map((news, index) => (
+            <div className='news-card'
               key={index} onClick={() => openUrlInNewTab(news.url)}>
               <div className='news-image'>
                 <img src={news.urlToImage} alt="News Image" />
@@ -63,14 +40,9 @@ const News = () => {
               </div>
             </div>
           ))}
+      </Slider>
         </div>
-        <button onClick={prevNews} className="carousel-button left-button">
-          &#9664;
-        </button>
-        <button onClick={nextNews} className="carousel-button right-button">
-          &#9654;
-        </button>
-      </div>
+      // </div>
   );
 };
 

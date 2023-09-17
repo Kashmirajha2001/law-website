@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Poppins:wght@400;500;700;800&display=swap');
 .news-feed-container {
-  width: 100vw;
-  height: 830px;
+  width: 90%;
+  height: fit-content;
   background: url(../../assets/images/news-bg.jpg);
   background-repeat: no-repeat;
-  margin: 4rem 0rem;
+  margin: 4rem auto;
   text-align: center;
-  overflow-x: auto;
+  /* overflow-x: auto; */
+  padding: 10px 0;
+  border-radius: 20px;
 }
 .news-feed-container h1 {
   font-family: 'Newsreader', serif;
@@ -19,17 +21,16 @@
 .news-feed-container span {
   color: rgb(204,136,9);
 }
-.news-contents {
-  margin: 1rem 0.5rem;
-  display: flex;
-  overflow-x: auto;
+.slider {
+  height: 550px;
 }
 .news-card {
-  width: 400px;
-  height: 500px;
-  margin: 20px;
-  background-color: #fff;
-  /* border-radius: 10px; */
+  /* width: 400px; */
+  background: no-repeat center center;
+  height: 900px;
+  margin: auto;
+  /* background-color: #fff; */
+  border-radius: 15px;
   padding: 2rem;
   text-align: center;
   cursor: pointer;
@@ -37,7 +38,7 @@
 }
 .news-card:hover {
   box-shadow: rgb(204, 139, 96, 0.8) 0px 54px 55px, rgb(204, 139, 96, 0.8) 0px -12px 30px, rgb(204, 139, 96, 0.8) 0px 4px 6px, rgb(204, 139, 96, 0.8) 0px 12px 13px, rgb(204, 139, 96, 0.8) 0px -3px 5px;
-  transform: scale(1.07);
+  transform: scale(1.04);
   transition: all 0.4s;
 }
 .news-image {
@@ -53,11 +54,11 @@
   border-radius: 20px;
 }
 .pub-date {
-  color: rgb(204, 139, 96);
+  color: #fff;
 }
 .news-text {
   font-family: 'Newsreader', serif;
-  color: rgb(131,130,130);
+  color: #fff;
 }
 
 .read-more {
@@ -77,28 +78,4 @@
 }
 .read-more:hover a {
   color: rgb(204, 139, 96);
-}
-
-.carousel-button {
-  background-color: rgb(204, 139, 96); 
-  color: white; 
-  border: none; 
-  padding: 10px 20px; 
-  margin: 15px 5px 10px; 
-  cursor: pointer; 
-  border-radius: 5px;
-  font-size: 16px; 
-  transition: background-color 0.3s;
-}
-
-.left-button {
-  order: 1; 
-}
-
-.right-button {
-  order: 2; 
-}
-
-.carousel-button:hover {
-  background-color: rgb(192, 92, 25); 
 }

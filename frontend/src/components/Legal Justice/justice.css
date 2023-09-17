@@ -1,0 +1,91 @@
+.justice-box {
+    width: 90%;
+    height: fit-content;
+    background-color: #fff;
+    margin: 0 auto 4rem;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.justice-box h1 {
+    font-family: 'Montserrat','sans-serif';
+    text-align: center;
+    padding-top: 2rem;
+}
+.justice-box p {
+    font-family: 'Montserrat','sans-serif';
+    text-align: center;
+    /* padding-top: 2rem; */
+    font-weight: 500;
+}
+.justice-box span {
+    color: rgb(204,136,9);
+}
+.law-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns */
+    grid-template-rows: repeat(2, auto); /* Two rows */
+    gap: 10px; /* Adjust the gap between cards */
+}
+/* LawCard.css */
+.law-card {
+    font-family: 'Montserrat', 'sans-serif';
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 350px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    margin: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    transition: all 0.4s;
+    color: black;
+  }
+  .law-card:hover {
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    transform: scale(1.04);
+    background-color: bisque;
+    /* color: #fff; */
+  }
+  
+  .law-card-image {
+    width: 340px; /* Set your desired width */
+    height: 200px; /* Set your desired height */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .law-card-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .law-card-description {
+    font-size: 1rem;
+  }
+  .law-card button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(204, 136, 9);
+    font-family: 'Montserrat', 'sans-serif';
+    color: #fff;
+    width: 120px;
+    height: 50px;
+    padding: 10px;
+    text-align: center;
+    margin: 1rem auto;
+    border: none;
+    transition: all 0.4s;
+    text-decoration: none;
+  }
+  .law-card button:hover {
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    transform: scale(1.04);
+  }
+  
