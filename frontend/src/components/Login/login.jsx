@@ -70,7 +70,7 @@ export default function Login() {
             md={7}
             sx={{
               backgroundImage:
-                'url(https://source.unsplash.com/random?legal,law,lawyer,jury,justice)',
+                'url(https://source.unsplash.com/random?law,lawyer)',
               backgroundRepeat: "no-repeat",
               backgroundColor: (t) =>
                 t.palette.mode === "light"

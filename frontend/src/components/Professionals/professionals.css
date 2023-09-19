@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Poppins:wght@400;500;700;800&display=swap');
+.professionals-feed-container {
+  height:fit-content;
+  text-align: center;
+  overflow-x: auto;
+}
+.professionals-feed-container h1 {
+  font-family: 'Newsreader', serif;
+  padding: 2rem 0 0;
+  font-weight: 800;
+  color: black;
+  letter-spacing: 2px;
+  font-size: 2.5rem;
+}
+.professionals-feed-container h1 span {
+  color: var(--color-primary-variant);
+}
+.professionals-contents {
+  margin: 1rem 0.5rem;
+  display: flex;
+  margin-top: 7rem;
+}
+.professionals-card {
+  width: 274px;
+  height: 275px;
+  margin: 20px;
+  background-color: #FFFF;
+  border: 1px solid black;
+  border-radius: 25px;
+  padding: 1rem 11rem;
+  text-align: center;
+  cursor: pointer;
+  /* transition: all 0.4s; */
+  animation: scroll 5s linear infinite;
+  white-space: nowrap;
+}
+
+@keyframes scroll {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(-100%);
+  }
+}
+.professionals-card:hover {
+  box-shadow: var(--color-primary-variant) 0px 54px 55px, var(--color-primary-variant) 0px -12px 30px, var(--color-primary-variant) 0px 4px 6px, var(--color-primary-variant) 0px 12px 13px, var(--color-primary-variant) 0px -3px 5px;
+  transform: scale(1.05);
+  transition: all 0.4s;
+}
+.professionals-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  top: -35%;
+  flex: 0 0 auto; 
+}
+
+.professionals-image img {
+  width: 160px;
+    height: 160px;
+    border: 5px solid blue;
+    border-radius: 50%;
+}
+
+.professionals-text{
+  position: relative;
+  top: -35%;
+}
+
+.btn a {
+  color: #fff;
+}

@@ -27,6 +27,20 @@ const lawsData = [
     imageSrc: "https://www.corporateprofessionals.com/wp-content/uploads/2020/05/Cantract-Law.jpg",
     link: "https://en.wikipedia.org/wiki/Contract#:~:text=A%20binding%20agreement%20between%20actors,contract%20law%20varies%20between%20jurisdictions.",
   },
+  {
+    id: 5,
+    type: "Education Law",
+    description: "Education law governs educational institutions, policies, and student rights, ensuring access, quality, and equity in the educational system.",
+    imageSrc: "https://source.unsplash.com/random?law,education",
+    link: "https://en.wikipedia.org/wiki/Category:Education_law.",
+  },
+  {
+    id: 6,
+    type: "Civil Law",
+    description: "Common areas of civil law include contracts, property disputes, family law (e.g., divorce and child custody), and personal injury claims.",
+    imageSrc: "https://source.unsplash.com/random?law,civil",
+    link: "https://en.wikipedia.org/wiki/Civil_law_(legal_system).",
+  },
 ];
 
 export default lawsData;
