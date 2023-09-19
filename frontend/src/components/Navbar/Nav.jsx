@@ -1,13 +1,22 @@
 import { React, useState } from "react";
 import Hamburger from "../../assets/hamburger.svg";
 import "./nav.css";
-// import login from '../Login/login'
+import { useNavigate } from 'react-router-dom';
 
 const Nav = () => {
   const [showNavbar, setShowNavbar] = useState(false);
 
   const handleShowNavbar = () => {
     setShowNavbar(!showNavbar);
+  };
+
+  const navigate = useNavigate()
+  const navigateToLogin = () =>{
+      navigate("/Login")
+  };
+
+  const navigateToSignUp = () =>{
+    navigate("/SignUp")
   };
 
   return (
@@ -34,10 +43,10 @@ const Nav = () => {
               <a href="">Contact Us</a>
             </li>
             <li>
-              <a href="../Login/login.jsx">login</a>
+              <a onClick={navigateToLogin}>login</a>
             </li>
             <li>
-              <a href="">SignUp</a>
+              <a onClick={navigateToSignUp}>SignUp</a>
             </li>
           </ul>
         </div>

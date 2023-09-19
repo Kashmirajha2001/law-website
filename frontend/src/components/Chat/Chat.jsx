@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import './chat.css';
-import { SiProbot } from 'react-icons/si';
+// import { SiProbot } from 'react-icons/si';
+import ChatIcon from '../../assets/chat/chatIcon.png';
+// import Send from '../../assets/chat/send.jfif';
+import SendIcon from '@mui/icons-material/Send';
+import SettingsVoiceIcon from '@mui/icons-material/SettingsVoice';
 
 const Chat = () => {
     const [showDiv, setShowDiv] = useState(false);
@@ -62,12 +66,17 @@ const Chat = () => {
                             value={userInput}
                             onChange={handleUserInput}
                         />
-                        <button type="submit" className='btn'>Send</button>
+                        <div type="submit" className='chatSend'>
+                            <SettingsVoiceIcon/>
+                        </div>
+                        <div type="submit" className='chatSend'>
+                            <SendIcon/>
+                        </div>
                     </form>
                 </div>
         )}
         <div className='chat-icon' onClick={toggleDiv}>
-            <SiProbot/>
+            <img src={ChatIcon}></img>
         </div>
     </div>
   )

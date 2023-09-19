@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Poppins:wght@400;500;700;800&display=swap');
 .news-feed-container {
-  width: 90%;
+  /* width: 90%; */
+  width: 70%;
   height: fit-content;
-  background: url(../../assets/images/news-bg.jpg);
+  background: url(../../assets/images/news-bg_1.jpg);
   background-repeat: no-repeat;
   margin: 4rem auto;
   text-align: center;
   /* overflow-x: auto; */
-  padding: 10px 0;
+  /* padding: 10px 0; */
   border-radius: 20px;
 }
 .news-feed-container h1 {

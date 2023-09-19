@@ -1,27 +1,22 @@
-import React from 'react';
-import './App.css';
-import Nav from './components/Navbar/Nav';
-import Intro from './components/Intro/Intro';
-import Carousel from './components/Carousel/Carousel';
-import Footer from './components/Footer/Footer';
-import PracticeAreas from './components/PracticeAreas/PracticeAreas';
-import News from './components/News/News';
-import Chat from './components/Chat/Chat';
-import { Justice } from './components/Legal Justice/Justice';
+import React from "react";
+import "./App.css";
+import Home from "./Home";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Login from './components/Login/Login';
+import SignUp from './components/SignUp/SignUp';
 
 function App() {
   return (
     <>
-      <Intro/>
-      <Nav/>
-      <Chat/>
-      <Carousel/>
-      <News/>
-      <Justice/>
-      <PracticeAreas/>
-      <Footer/>
-      {/* <Login/> */}
-      {/* <Chat/> */}
+      <BrowserRouter>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/Login" element={<Login />} />
+          <Route path="/SignUp" element={<SignUp />} />
+          <Route path="*" element={<div>Error</div>} />
+        </Routes>
+      </BrowserRouter>
+      {/* <Home/> */}
     </>
   );
 }

@@ -5,7 +5,7 @@
     position: fixed;
     z-index: 10;
     right: 50px;
-    bottom: 40px;
+    bottom: 20px;
     width: fit-content;
     height: fit-content;
     font-size: 60px;
@@ -13,18 +13,23 @@
     cursor: pointer;
     /* transition: all 0.3s; */
 }
+
+.chat-icon img{
+    height: 100px;
+    width: 100px;
+}
 .chat-icon:hover {
     color: bisque;
 }
 .chat-box {
     width: 400px;
     height: 450px;
-    background-color: bisque;
+    background-color: rgb(202, 225, 233);
     border-radius: 20px;
     position: fixed;
     z-index: 1000;
     right: 40px;
-    bottom: 120px;
+    bottom: 130px;
     transition: all 0.4s;
     align-items: center;
 }
@@ -78,7 +83,8 @@
 .input-form {
     margin-top: 30px;
     width: 100%;
-    text-align: center
+    text-align: center;
+    display: flex;
 }
 
 .input-form input {
@@ -87,9 +93,11 @@
     background: transparent;
     border: 3px solid var(--color-primary-variant);
     border-radius: 10px;
+    margin-left: 20px;
     /* border-color: black; */
 }
 
-.input-form button {
+.input-form .chatSend {
+    /* width: 20%; */
     margin-left: 10px;
 }
