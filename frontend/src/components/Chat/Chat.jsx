@@ -66,7 +66,7 @@ const Chat = () => {
                             value={userInput}
                             onChange={handleUserInput}
                         />
-                        <div type="submit" className='chatSend'>
+                        <div className='chatSend'>
                             <SettingsVoiceIcon/>
                         </div>
                         <div type="submit" className='chatSend'>
