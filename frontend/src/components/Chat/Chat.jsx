@@ -3,7 +3,7 @@ import './chat.css';
 import ChatIcon from '../../assets/chat/chatIcon.png';
 import SendIcon from '@mui/icons-material/Send';
 import SettingsVoiceIcon from '@mui/icons-material/SettingsVoice';
-
+import {MdOutlineClose} from 'react-icons/md';
 
 const Chat = () => {
     const [showDiv, setShowDiv] = useState(false);
@@ -107,7 +107,7 @@ const Chat = () => {
                 </div>
         )}
         <div className='chat-icon' onClick={toggleDiv}>
-            <img src={ChatIcon}></img>
+            {showDiv ? <MdOutlineClose/> : <img src={ChatIcon}></img>}
         </div>
     </div>
   )
