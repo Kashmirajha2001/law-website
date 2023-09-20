@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './chat.css';
 import { SiProbot } from 'react-icons/si';
 
@@ -7,7 +7,9 @@ const Chat = () => {
     const [userInput, setUserInput] = useState('');
     const [userMessages, setUserMessages] = useState([]);
     const [botMessages, setBotMessages] = useState([]);
+    const [conversation, setConversation] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
+    const chatMsgsRef = useRef(null);
 
     
     const toggleDiv = () => {
@@ -34,13 +36,43 @@ const Chat = () => {
         }, 1000);
     }
 
+    useEffect(() => {
+        // Combine userMessages and botMessages based on their indexes
+        const newConversation = [];
+        const maxLength = Math.max(userMessages.length, botMessages.length);
+        
+        for (let i = 0; i < maxLength; i++) {
+            if (i < userMessages.length) {
+                newConversation.push(userMessages[i]);
+            }
+            if (i < botMessages.length) {
+                newConversation.push(botMessages[i]);
+            }
+        }
+
+        setConversation(newConversation);
+        // Scroll to the bottom of the chat window when conversation updates
+        if (chatMsgsRef.current) {
+            chatMsgsRef.current.scrollTop = chatMsgsRef.current.scrollHeight;
+        }
+        // console.log(conversation);
+    }, [userMessages, botMessages]);
+
   return (
     <div className='chat-bot-container'>
         {showDiv && (
             <div className='chat-box'>
             <p>How can I Help you ?</p>
-            <div className='chat-msgs'>
-                {userMessages.map((userMessage, index) => (
+            <div ref={chatMsgsRef} className='chat-msgs'>
+                {
+                    conversation.map((message, index) => (
+                        <div key={index} className={index%2===0 ? 'user-msg' : 'bot-msg'}>
+                            <div className={index%2===0 ? 'message-content left' : 'message-content right'}>{message}</div>
+                        </div>
+                    ))
+                }
+                {isLoading ? <div className="message-content left"><div className="loading-indicator">Bot is typing...</div></div> : ''}
+                {/* {userMessages.map((userMessage, index) => (
                     <div key={index} className='user-msg'>
                         <div className='message-content right'>{userMessage}</div>
                 </div>
@@ -53,7 +85,7 @@ const Chat = () => {
                             <div className='message-content left'>{message}</div>
                         </div>
                     ))
-                )}
+                )} */}
                 </div>
                     <form className='input-form' onSubmit={handleSendMessage}>
                         <input
