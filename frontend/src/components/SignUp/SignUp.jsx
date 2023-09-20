@@ -76,7 +76,9 @@ export default function SignUp() {
                 Thank you for Registration.
               </Typography>
               <Typography variant="subtitle1">
-                Please Login to your account.
+                Please <Link href="./Login" variant="body2">
+                      {"Login"}
+                    </Link> to your account.
               </Typography>
             </React.Fragment>
           ) : (
@@ -84,7 +86,7 @@ export default function SignUp() {
               {getStepContent(activeStep)}
               <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
                 {activeStep !== 0 && (
-                  <Button onClick={handleBack} sx={{ mt: 3, ml: 1 }} className='btn'>
+                  <Button onClick={handleBack} sx={{ mt: 3, ml: 1 }}>
                     Back
                   </Button>
                 )}
@@ -93,7 +95,6 @@ export default function SignUp() {
                   variant="contained"
                   onClick={handleNext}
                   sx={{ mt: 3, ml: 1 }}
-                  className='btn'
                 >
                   {activeStep === steps.length - 1 ? 'Confirm SignUp' : 'Next'}
                 </Button>
