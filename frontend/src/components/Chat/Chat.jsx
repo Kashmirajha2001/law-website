@@ -10,8 +10,8 @@ const Chat = () => {
     const [showDiv, setShowDiv] = useState(false);
     const [userInput, setUserInput] = useState('');
     const [messages, setMessages] = useState([]);
-    // const [botMessages, setBotMessages] = useState([]);
-    // const [isLoading, setIsLoading] = useState(false);
+    const [botMessages, setBotMessages] = useState([]);
+    const [isLoading, setIsLoading] = useState(false);
 
     
     const toggleDiv = () => {
@@ -49,7 +49,7 @@ const Chat = () => {
                         <div className='message-content right'>{message}</div>
                 </div>
                 ))}
-                {/* {isLoading ? (
+                {isLoading ? (
                     <div className="loading-indicator">Bot is typing...</div>
                 ) : (
                     botMessages.map((message, index) => (
@@ -57,7 +57,7 @@ const Chat = () => {
                             <div className='message-content left'>{message}</div>
                         </div>
                     ))
-                )} */}
+                )}
                 </div>
                     <form className='input-form' onSubmit={handleSendMessage}>
                         <input
@@ -66,12 +66,12 @@ const Chat = () => {
                             value={userInput}
                             onChange={handleUserInput}
                         />
-                        <div className='voice'>
-                            <SettingsVoiceIcon/>
-                        </div>
-                        <div type="submit" className='chatSend'>
-                            <SendIcon/>
-                        </div>
+                        <button className='voice'>
+                            <SettingsVoiceIcon />
+                        </button>
+                        <button type="submit" className='chatSend'>
+                            <SendIcon />
+                        </button>
                     </form>
                 </div>
         )}
