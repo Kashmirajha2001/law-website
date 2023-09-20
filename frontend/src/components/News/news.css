@@ -38,7 +38,7 @@
   transition: all 0.4s;
 }
 .news-card:hover {
-  box-shadow: rgb(204, 139, 96, 0.8) 0px 54px 55px, rgb(204, 139, 96, 0.8) 0px -12px 30px, rgb(204, 139, 96, 0.8) 0px 4px 6px, rgb(204, 139, 96, 0.8) 0px 12px 13px, rgb(204, 139, 96, 0.8) 0px -3px 5px;
+  /* box-shadow: rgb(204, 139, 96, 0.8) 0px 54px 55px, rgb(204, 139, 96, 0.8) 0px -12px 30px, rgb(204, 139, 96, 0.8) 0px 4px 6px, rgb(204, 139, 96, 0.8) 0px 12px 13px, rgb(204, 139, 96, 0.8) 0px -3px 5px; */
   transform: scale(1.04);
   transition: all 0.4s;
 }

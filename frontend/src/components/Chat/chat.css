@@ -9,17 +9,17 @@
     width: fit-content;
     height: fit-content;
     font-size: 60px;
-    color: aqua;
+    color: rgb(163, 19, 43);
     cursor: pointer;
     /* transition: all 0.3s; */
 }
 
 .chat-icon img{
-    height: 100px;
-    width: 100px;
+    height: 70px;
+    width: 70px;
 }
 .chat-icon:hover {
-    color: bisque;
+    color: rgb(231, 9, 9);
 }
 .chat-box {
     width: 400px;
@@ -68,7 +68,9 @@
     text-align: right;
     margin: 0 20px;
     margin-top: 10px;
+    margin-left: auto;
     background-color: white;
+    width: fit-content;
     border-radius: 10px;
 }
 .bot-msg {
