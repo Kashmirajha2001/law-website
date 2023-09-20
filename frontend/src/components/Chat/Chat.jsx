@@ -1,19 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './chat.css';
-// import { SiProbot } from 'react-icons/si';
 import ChatIcon from '../../assets/chat/chatIcon.png';
-// import Send from '../../assets/chat/send.jfif';
 import SendIcon from '@mui/icons-material/Send';
 import SettingsVoiceIcon from '@mui/icons-material/SettingsVoice';
+
 
 const Chat = () => {
     const [showDiv, setShowDiv] = useState(false);
     const [userInput, setUserInput] = useState('');
-    const [messages, setMessages] = useState([]);
+    const [userMessages, setUserMessages] = useState([]);
     const [botMessages, setBotMessages] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
 
-    
     const toggleDiv = () => {
         setShowDiv(!showDiv);
     }
@@ -24,16 +22,16 @@ const Chat = () => {
 
     const handleSendMessage = (e) => {
         e.preventDefault();
-        setMessages([...messages, userInput]);
+        setUserMessages([...userMessages, userInput]);
         setUserInput('');
         simulateBotResponse(userInput);
     }
 
     const simulateBotResponse = (userInput) => {
-        // setIsLoading(true);
+        setIsLoading(true);
         setTimeout(() => {
             const botResponse = `Bot: You said "${userInput}"`;
-            setMessages([...messages, botResponse]);
+            setBotMessages([...botMessages, botResponse]);
             setIsLoading(false);
         }, 1000);
     }
@@ -44,9 +42,9 @@ const Chat = () => {
             <div className='chat-box'>
             <p>How can I Help you ?</p>
             <div className='chat-msgs'>
-                {messages.map((message, index) => (
+                {userMessages.map((userMessage, index) => (
                     <div key={index} className='user-msg'>
-                        <div className='message-content right'>{message}</div>
+                        <div className='message-content right'>{userMessage}</div>
                 </div>
                 ))}
                 {isLoading ? (

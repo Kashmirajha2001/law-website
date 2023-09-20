@@ -97,7 +97,13 @@
     /* border-color: black; */
 }
 
-.input-form .chatSend {
+.input-form button {
+    outline: none;
+    border: none;
+    background: transparent;
     /* width: 20%; */
+}
+
+.input-form .voice{
     margin-left: 10px;
 }
