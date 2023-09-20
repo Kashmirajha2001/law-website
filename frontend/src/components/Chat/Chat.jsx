@@ -3,7 +3,8 @@ import './chat.css';
 import ChatIcon from '../../assets/chat/chatIcon.png';
 import SendIcon from '@mui/icons-material/Send';
 import SettingsVoiceIcon from '@mui/icons-material/SettingsVoice';
-import {MdOutlineClose} from 'react-icons/md';
+import { MdOutlineClose } from 'react-icons/md';
+import axios from 'axios';
 
 const Chat = () => {
     const [showDiv, setShowDiv] = useState(false);
@@ -13,6 +14,8 @@ const Chat = () => {
     const [conversation, setConversation] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
     const chatMsgsRef = useRef(null);
+    const [chatBotText, setChatBotText] = useState();
+    const [flag, setFlag] = useState();
 
     const toggleDiv = () => {
         setShowDiv(!showDiv);
@@ -32,8 +35,18 @@ const Chat = () => {
     const simulateBotResponse = async (userInput) => {
         setIsLoading(true);
         // console.log("in simulateBotResponse function.");
+
+        const botResponse = await axios.post("http://localhost:5000/", {
+            userChatText: userInput
+        });
+
+        const chatBotText = botResponse.data[0];
+        setChatBotText(chatBotText);
+        // const flag = botResponse.data[1];
+        setFlag(botResponse.data[1]);
+
         setTimeout(() => {
-            const botResponse = `Bot: You said "${userInput}"`;
+            const botResponse = `Bot: "${chatBotText}"`;
             setBotMessages([...botMessages, botResponse]);
             setIsLoading(false);
         }, 1000);
@@ -43,7 +56,7 @@ const Chat = () => {
         // Combine userMessages and botMessages based on their indexes
         const newConversation = [];
         const maxLength = Math.max(userMessages.length, botMessages.length);
-        
+
         for (let i = 0; i < maxLength; i++) {
             if (i < userMessages.length) {
                 newConversation.push(userMessages[i]);
@@ -61,21 +74,29 @@ const Chat = () => {
         // console.log(conversation);
     }, [userMessages, botMessages]);
 
-  return (
-    <div className='chat-bot-container'>
-        {showDiv && (
-            <div className='chat-box'>
-            <p>How can I Help you ?</p>
-            <div ref={chatMsgsRef} className='chat-msgs'>
-                {
-                    conversation.map((message, index) => (
-                        <div key={index} className={index%2===0 ? 'user-msg' : 'bot-msg'}>
-                            <div className={index%2===0 ? 'message-content left' : 'message-content right'}>{message}</div>
-                        </div>
-                    ))
-                }
-                {isLoading ? <div className="message-content left"><div className="loading-indicator">Bot is typing...</div></div> : ''}
-                {/* {userMessages.map((userMessage, index) => (
+    return (
+        <div className='chat-bot-container'>
+            {showDiv && (
+                <div className='chat-box'>
+                    <p>How can I Help you ?</p>
+                    <div ref={chatMsgsRef} className='chat-msgs'>
+                        {
+                            conversation.map((message, index) => (
+                                flag === 0
+                                    ?
+                                    <div key={index} className={index % 2 === 0 ? 'user-msg' : 'bot-msg'}>
+                                        <div className={index % 2 === 0 ? 'message-content left' : 'message-content right'}>{message}</div>
+                                    </div>
+                                    :
+                                    <a href={chatBotText} target='_blank'>
+                                        <div key={index} className={index % 2 === 0 ? 'user-msg' : 'bot-msg'}>
+                                            <div className={index % 2 === 0 ? 'message-content left' : 'message-content right'}>{message}</div>
+                                        </div>
+                                    </a>
+                            ))
+                        }
+                        {isLoading ? <div className="message-content left"><div className="loading-indicator">Bot is typing...</div></div> : ''}
+                        {/* {userMessages.map((userMessage, index) => (
                     <div key={index} className='user-msg'>
                         <div className='message-content right'>{userMessage}</div>
                 </div>
@@ -89,7 +110,7 @@ const Chat = () => {
                         </div>
                     ))
                 )} */}
-                </div>
+                    </div>
                     <form className='input-form' onSubmit={handleSendMessage}>
                         <input
                             type="text"
@@ -105,12 +126,12 @@ const Chat = () => {
                         </button>
                     </form>
                 </div>
-        )}
-        <div className='chat-icon' onClick={toggleDiv}>
-            {showDiv ? <MdOutlineClose/> : <img src={ChatIcon}></img>}
+            )}
+            <div className='chat-icon' onClick={toggleDiv}>
+                {showDiv ? <MdOutlineClose /> : <img src={ChatIcon}></img>}
+            </div>
         </div>
-    </div>
-  )
+    )
 }
 
 export default Chat

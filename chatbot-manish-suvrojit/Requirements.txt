@@ -1,0 +1,17 @@
+mkdir bot
+cd bot2
+python -m venv env
+env\scripts\activate
+pip install nltk
+python
+import nltk
+nltk.download('punkt')
+exit()
+pip install numpy
+pip install torch
+python
+import numpy
+import torch
+exit()
+python train.py
+python chat.py
