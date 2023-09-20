@@ -29,7 +29,7 @@ function Copyright(props) {
       {...props}
     >
       {"Copyright © "}
-      <Link color="inherit" href="">
+      <Link color="inherit" href="./">
         e-nyayaSeva
       </Link>{" "}
       {new Date().getFullYear()}
@@ -44,6 +44,7 @@ export default function Login() {
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
+    // <Link href="./" ></Link>
     console.log({
       email: data.get("email"),
       password: data.get("password"),
@@ -166,7 +167,7 @@ export default function Login() {
                     </Link>
                   </Grid>
                   <Grid item>
-                    <Link href="#" variant="body2">
+                    <Link href="./SignUp" variant="body2">
                       {"Don't have an account? Sign Up"}
                     </Link>
                   </Grid>

@@ -26,7 +26,7 @@ const News = () => {
       <h1>Latest <span>News</span></h1>
       {/* <div className='news-contents'> */}
       <Slider className="slider" autoplay={1500}>
-        {newsData.map((news, index) => (
+        {newsData !== '' ? (newsData.map((news, index) => (
             <div className='news-card'
               key={index} onClick={() => openUrlInNewTab(news.url)}>
               <div className='news-image'>
@@ -39,7 +39,8 @@ const News = () => {
                 <p className='pub-date'>Published Date: {new Date(news.publishedAt).toLocaleString()}</p>
               </div>
             </div>
-          ))}
+          ))) : null
+          }
       </Slider>
         </div>
       // </div>
