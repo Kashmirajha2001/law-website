@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './chat.css';
 import ChatIcon from '../../assets/chat/chatIcon.png';
 import SendIcon from '@mui/icons-material/Send';
@@ -29,8 +29,9 @@ const Chat = () => {
         simulateBotResponse(userInput);
     }
 
-    const simulateBotResponse = (userInput) => {
+    const simulateBotResponse = async (userInput) => {
         setIsLoading(true);
+        // console.log("in simulateBotResponse function.");
         setTimeout(() => {
             const botResponse = `Bot: You said "${userInput}"`;
             setBotMessages([...botMessages, botResponse]);
