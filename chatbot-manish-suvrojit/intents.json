@@ -6,8 +6,7 @@
                 "Hi",
                 "Hello",
                 "Hey",
-                "How are you",
-                "What's up"
+                "How are you"
             ],
             "responses": [
                 "Hi there",
@@ -47,7 +46,7 @@
         {
             "tag": "about",
             "patterns": [
-                "What you do",
+                "you do",
                 "Who are you"
             ],
             "responses": [
@@ -60,7 +59,7 @@
             "patterns": [
                 "Help",
                 "need help",
-                " help me"
+                "help me"
             ],
             "responses": [
                 "Sure, what do you need help with?",
@@ -116,7 +115,7 @@
         {
             "tag": "time",
             "patterns": [
-                "What's time"
+                "time"
             ],
             "responses": [
                 "I'm sorry, but I don't have access to real-time information like the current time.",
@@ -136,8 +135,8 @@
         {
             "tag": "compliment",
             "patterns": [
-                "You're awesome",
-                "You're great"
+                "awesome",
+                "great"
             ],
             "responses": [
                 "Thank you! I'm just a program, but I'm here to assist and make your experience better.",
@@ -172,18 +171,6 @@
             "responses": [
                 "Education is the process of acquiring knowledge, skills, values, and attitudes. It plays a crucial role in personal and societal development.",
                 "Studying effectively involves setting clear goals, creating a conducive study environment, staying organized, taking regular breaks, and seeking help when needed."
-            ]
-        },
-        {
-            "tag": "health",
-            "patterns": [
-                "healthy",
-                "health",
-                "fitness"
-            ],
-            "responses": [
-                "To stay healthy, maintain a balanced diet, engage in regular physical activity, get enough sleep, manage stress, and avoid harmful habits.",
-                "Fitness is essential for overall well-being and can improve your mood, energy levels, and longevity."
             ]
         },
         {
@@ -1129,7 +1116,7 @@
         {
             "tag": "11",
             "patterns": [
-                "legal drinking age "
+                "legal drinking "
             ],
             "responses": [
                 "The legal drinking age varies from state to state in India, typically ranging from 18 to 25 years."
@@ -1211,7 +1198,7 @@
         {
             "tag": "20",
             "patterns": [
-                "Article 370  Constitution"
+                "Article 370 Constitution"
             ],
             "responses": [
                 "Article 370 granted special autonomy to the state of Jammu and Kashmir, but it was revoked in 2019."
@@ -1295,7 +1282,7 @@
         {
             "tag": "31",
             "patterns": [
-                "Prevention of Corruption Act"
+                "Prevention Corruption Act"
             ],
             "responses": [
                 "The Prevention of Corruption Act deals with the prosecution of public servants involved in corrupt practices."
@@ -1323,7 +1310,7 @@
         {
             "tag": "34",
             "patterns": [
-                "National Commission  Women",
+                "National Commission Women",
                 "NCW"
             ],
             "responses": [
@@ -1921,6 +1908,15 @@
             ],
             "responses": [
                 "https://google.com"
+            ]
+        },
+        {
+            "tag": "102",
+            "patterns": [
+                "legislative department"
+            ],
+            "responses": [
+                "https://lddashboard.legislative.gov.in/"
             ]
         }
     ]
