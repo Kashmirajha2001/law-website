@@ -134,7 +134,7 @@ const Footer = () => {
       </div>
       <div className="copyRight">
         <hr />
-        <p onClick={() => localStorage.removeItem("credentials")}>
+        <p onClick={()=>localStorage.clear()}>
           Copyrights © 2023 <span>e-nyayaSeva Pvt. Ltd</span>.All rights reserved
         </p>
       </div>
