@@ -1,10 +1,13 @@
-import { React, useState } from "react";
+import { useState } from "react";
 import Hamburger from "../../assets/hamburger.svg";
 import "./nav.css";
 import { useNavigate } from 'react-router-dom';
+import Community from "../CommunitySection/Community";
 
 const Nav = () => {
   const [showNavbar, setShowNavbar] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const storedCredentials = JSON.parse(localStorage.getItem("credentials"));
 
   const handleShowNavbar = () => {
     setShowNavbar(!showNavbar);
@@ -20,6 +23,7 @@ const Nav = () => {
   };
 
   return (
+    <div>
     <nav className="navbar">
       <div className="container">
         <div className="menu-icon" onClick={handleShowNavbar} >
@@ -42,16 +46,32 @@ const Nav = () => {
             <li>
               <a href="">Contact Us</a>
             </li>
-            <li>
-              <a onClick={navigateToLogin}>login</a>
-            </li>
-            <li>
-              <a onClick={navigateToSignUp}>SignUp</a>
-            </li>
+            {storedCredentials ? (
+              <li>
+                <a onClick={() => setIsOpen(!isOpen)}>Community</a>
+              </li>
+            ) : ''}
+            
+              {storedCredentials ? 
+                null :
+                (
+                <li>
+                  <a onClick={navigateToLogin}>login</a>
+                </li>
+              )}
+              {storedCredentials ? 
+                null :
+                (
+                  <li>
+                    <a onClick={navigateToSignUp}>SignUp</a>
+                  </li>
+              )}
           </ul>
         </div>
       </div>
     </nav>
+    {isOpen ? <Community/> : ''}
+    </div>
   );
 };
 
