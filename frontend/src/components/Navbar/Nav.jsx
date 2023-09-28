@@ -3,6 +3,7 @@ import Hamburger from "../../assets/hamburger.svg";
 import "./nav.css";
 import { useNavigate } from 'react-router-dom';
 import Community from "../CommunitySection/Community";
+import adminImg from '../../assets/images/adminProfile.png';
 
 const Nav = () => {
   const [showNavbar, setShowNavbar] = useState(false);
@@ -50,6 +51,12 @@ const Nav = () => {
               <li>
                 <a onClick={() => setIsOpen(!isOpen)}>Community</a>
               </li>
+            ) : ''}
+            {storedCredentials ? (
+              <img className="profile-img" src={adminImg} alt="admin.png"/>
+            ) : ''}
+            {storedCredentials ? (
+              <h4 style={{color:'#fff'}}>Admin</h4>
             ) : ''}
             
               {storedCredentials ? 

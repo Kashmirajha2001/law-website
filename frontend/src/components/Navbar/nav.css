@@ -11,6 +11,13 @@
   transition: all 0.3s;
 }
 
+
+.profile-img {
+  height: 37px;
+  margin: 1rem;
+  cursor: pointer;
+}
+
 .navbar {
   height: 60px;
   background-color: var(--color-primary-variant);
