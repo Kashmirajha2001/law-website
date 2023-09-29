@@ -2,12 +2,10 @@ import { useState } from "react";
 import Hamburger from "../../assets/hamburger.svg";
 import "./nav.css";
 import { useNavigate } from 'react-router-dom';
-import Community from "../CommunitySection/Community";
 import adminImg from '../../assets/images/adminProfile.png';
 
 const Nav = () => {
   const [showNavbar, setShowNavbar] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
   const storedCredentials = JSON.parse(localStorage.getItem("credentials"));
 
   const handleShowNavbar = () => {
@@ -44,14 +42,14 @@ const Nav = () => {
             <li>
               <a href="">News</a>
             </li>
-            <li>
-              <a href="">Contact Us</a>
-            </li>
             {storedCredentials ? (
               <li>
                 <a onClick={() => setIsOpen(!isOpen)}>Community</a>
               </li>
             ) : ''}
+            <li>
+              <a href="">Contact Us</a>
+            </li>
             {storedCredentials ? (
               <img className="profile-img" src={adminImg} alt="admin.png"/>
             ) : ''}
@@ -77,7 +75,6 @@ const Nav = () => {
         </div>
       </div>
     </nav>
-    {isOpen ? <Community/> : ''}
     </div>
   );
 };
