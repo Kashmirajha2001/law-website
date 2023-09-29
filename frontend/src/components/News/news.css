@@ -3,8 +3,9 @@
   /* width: 90%; */
   width: 70%;
   height: fit-content;
-  background: url(../../assets/images/news-bg_1.jpg);
+  background: url(../../assets/carousel/news2.jpg);
   background-repeat: no-repeat;
+  background-size: cover;
   margin: 4rem auto;
   text-align: center;
   /* overflow-x: auto; */

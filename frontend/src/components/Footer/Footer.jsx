@@ -1,9 +1,12 @@
 import React from "react";
 import "./footer.css";
 import img from "../../assets/logo.png";
-import { ImLocation } from "react-icons/Im";
-import { IoMdCall } from "react-icons/Io";
-import { FiMail } from "react-icons/Fi";
+// import ImLocation from "react-icons/Im";
+// import IoMdCall from "react-icons/Io";
+// import FiMail from "react-icons/Fi";
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import PhoneIcon from '@mui/icons-material/Phone';
+import MailIcon from '@mui/icons-material/Mail';
 import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -26,15 +29,15 @@ const Footer = () => {
               exercitationem! Est, voluptas!
             </a>
             <a className="footerLink">
-              <ImLocation className="footericon" />
+              <LocationOnIcon className="footericon" />
               Behala, MR Street
             </a>
             <a className="footerLink">
-              <IoMdCall className="footericon" />
+              <PhoneIcon className="footericon" />
               9876543210
             </a>
             <a className="footerLink">
-              <FiMail className="footericon" />
+              <MailIcon className="footericon" />
               enyayseva@gmail.com
             </a>
           </div>

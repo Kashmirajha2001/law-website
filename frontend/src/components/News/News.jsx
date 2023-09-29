@@ -22,7 +22,7 @@ const News = () => {
     };
 
   return (
-    <div className='news-feed-container'>
+    <div className='news-feed-container' id="news">
       <h1>Latest <span>News</span></h1>
       {/* <div className='news-contents'> */}
       <Slider className="slider" autoplay={1500}>

@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Poppins:wght@400;500;700;800&display=swap');
+.attorneys-feed-container {
+  height:fit-content;
+  text-align: center;
+  /* overflow-x: auto; */
+  /* position: relative;
+  overflow: auto; */
+}
+.attorneys-feed-container h1 {
+  /* position: sticky;
+  top: 0; */
+  font-family: 'Newsreader', serif;
+  padding: 2rem 0 0;
+  font-weight: 800;
+  color: black;
+  letter-spacing: 2px;
+  font-size: 2.5rem;
+}
+.attorneys-feed-container h1 span {
+  color: var(--color-primary-variant);
+}
+.attorneys-contents {
+  margin: 3rem 4rem 4rem;
+  display: flex;
+  flex-direction: column;
+}
+.attorneys-card {
+  display: flex;
+  /* height: 160px; */
+  margin: 8px;
+  background-color: #FFFF;
+  border: 1px solid black;
+  border-radius: 25px;
+  padding: 1rem 2.5rem;
+  /* text-align: center; */
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.attorneys-card::before{
+    content: '';
+    position: absolute;
+    top:0;
+    left:70%;
+    width: 40%;
+    height: 100%;
+    background: rgba(39, 40, 41, 0.05);
+    pointer-events: none;
+    transform: skewX(-15deg);
+}
+
+/* .attorneys-card:hover {
+  box-shadow: var(--color-primary-variant) 0px 30px 20px, var(--color-primary-variant) 0px -12px 30px, var(--color-primary-variant) 0px 4px 6px, var(--color-primary-variant) 0px 12px 13px, var(--color-primary-variant) 0px -3px 5px;
+  transform: scale(1.08);
+} */
+
+.attorneys-image {
+  /* background-repeat: no-repeat;
+  background-size: cover;
+  position: relative; */
+  /* top: -50%; */
+  /* flex: 0 0 auto;  */
+  /* z-index: 100; */
+}
+
+.attorneys-image img {
+  width: 170px;
+    height: 210px;
+}
+
+.attorneys-text{
+    text-align: left;
+    padding-left: 35px;
+    line-height: 10px;
+}
+
+.skills{
+    text-align: left;
+    margin-left: auto;
+    max-width: 25%;
+}

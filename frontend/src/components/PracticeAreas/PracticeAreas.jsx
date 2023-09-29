@@ -3,7 +3,7 @@ import "./practiceAreas.css";
 
 const PracticeAreas = () => {
   return (
-    <div className="practiceContent">
+    <div className="practiceContent" id="services">
         <div className="headingPractice">
             <h1>Our Practice Areas</h1>
         </div>
