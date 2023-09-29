@@ -2,7 +2,7 @@ import { React, useState } from "react";
 import Hamburger from "../../assets/hamburger.svg";
 import "./nav.css";
 import { useNavigate } from "react-router-dom";
-import adminImg from '../../assets/images/adminProfile.png';
+import adminImg from "../../assets/images/adminProfile.png";
 
 const Nav = () => {
   const [showNavbar, setShowNavbar] = useState(false);
@@ -70,12 +70,6 @@ const Nav = () => {
             <li>
               <a onClick={navigateToContact}>Contact Us</a>
             </li>
-            {/*<li>
-              <a onClick={navigateToLogin}>login</a>
-            </li>
-            <li>
-              <a onClick={navigateToSignUp}>SignUp</a>
-            </li> */}
             {storedCredentials ? (
               <img className="profile-img" src={adminImg} alt="admin.png" />
             ) : (
