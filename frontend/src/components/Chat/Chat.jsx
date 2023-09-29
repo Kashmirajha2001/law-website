@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './chat.css';
-import ChatIcon from '../../assets/chat/chatIcon.png';
+import ChatIcon from '../../assets/chat/chatBotImage.png';
 import SendIcon from '@mui/icons-material/Send';
 import SettingsVoiceIcon from '@mui/icons-material/SettingsVoice';
 import { MdOutlineClose } from 'react-icons/md';
