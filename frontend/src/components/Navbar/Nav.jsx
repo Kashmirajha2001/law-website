@@ -64,28 +64,19 @@ const Nav = () => {
             ) : (
               ""
             )}
-            {/* <li>
-              <a onClick={navigateToCommunity}>Community</a>
-            </li> */}
             <li>
               <a onClick={navigateToContact}>Contact Us</a>
             </li>
             {storedCredentials ? (
-              <img className="profile-img" src={adminImg} alt="admin.png" />
+              <li style={{ left:"60%"}}>
+                <a><img img className="profile-img" src={adminImg} alt="admin.png"/></a>
+                <a style={{ position:"absolute", top:"20%"}}>Admin</a>
+              </li>
             ) : (
-              ""
-            )}
-            {storedCredentials ? <h4 style={{ color: "#fff" }}>Admin</h4> : ""}
-
-            {storedCredentials ? null : (
-              <li>
-                <a onClick={navigateToLogin}>login</a>
-              </li>
-            )}
-            {storedCredentials ? null : (
-              <li>
-                <a onClick={navigateToSignUp}>SignUp</a>
-              </li>
+                <li>
+                  <a onClick={navigateToLogin}>login</a>
+                  <a onClick={navigateToSignUp}>SignUp</a>
+                </li>
             )}
           </ul>
         </div>

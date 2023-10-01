@@ -17,11 +17,11 @@ import "./poll.css";
 //   theme: "purple"
 // };
 
-const pollQuestion2 = "What framework do you prefer?";
+const pollQuestion2 = "Which of the following legal issues do you consider most pressing in our country?";
 const pollAnswers2 = [
-  { option: "React", votes: 5 },
-  { option: "Vue", votes: 2 },
-  { option: "Angular", votes: 8 }
+  { option: "Criminal justice reform", votes: 5 },
+  { option: "Civil rights and liberties", votes: 2 },
+  { option: "Employment and labor laws", votes: 8 }
 ];
 const pollStyles2 = {
   questionSeparator: false,
@@ -63,7 +63,7 @@ const Poll = () => {
   return (
     <>
     <div id="poll">
-      <h1 className="title">react-polls</h1>
+      <h1 className="title">Polls</h1>
       <div className="poll">
         <div>
           <Polls

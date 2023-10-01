@@ -6,6 +6,9 @@ import AttorneysData from "./AttorneysData";
 import "./attorneys.css";
 import { useNavigate } from "react-router-dom";
 import { Rating } from "@mui/material";
+import WorkHistoryIcon from '@mui/icons-material/WorkHistory';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import GTranslateIcon from '@mui/icons-material/GTranslate';
 
 const Community = () => {
   const navigate = useNavigate();
@@ -26,6 +29,7 @@ const Community = () => {
           ad officia dolorem! Similique sapiente minima saepe non dolorem
           quibusdam eum.
         </p>
+        <a className="btn">Show Filters</a>
         <div className="attorneys-contents">
           {AttorneysData.map((Professionals, index) => (
             <div
@@ -40,9 +44,9 @@ const Community = () => {
                 <h3>{Professionals.name}</h3>
                 <p>{Professionals.designation}</p>
                 <div><Rating name="simple-controlled" defaultValue={4} /><span>456+ ratings</span></div>
-                <p>15 years of experience</p>
-                <p>Kolkata</p>
-                <p>Bengali, English, Hindi</p>
+                <p><WorkHistoryIcon className="profile-intro-icon"/>15 years of experience</p>
+                <p><LocationOnIcon className="profile-intro-icon"/>Kolkata</p>
+                <p><GTranslateIcon className="profile-intro-icon"/>Bengali, English, Hindi</p>
               </div>
               <div className="skills">
                 <h2>Practice Areas & Skills</h2>

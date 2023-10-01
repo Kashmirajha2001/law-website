@@ -1,0 +1,61 @@
+.LegalProfile{
+    margin: 3%;
+    border: 1px solid var(--color-primary);
+    border-radius: 10px;
+    padding: 2%;  
+}
+
+.profileIntro{
+    display: flex;
+    background: #FFFF;
+    border: 1px solid rgb(76, 75, 75);
+    border-radius: 10px;
+    padding: 10px 50px;
+}
+
+.profile-image img{
+    width: 200px;
+    height: 200px;
+}
+
+.profile-intro-text{
+    padding-left: 35px;
+    line-height: 0;
+}
+
+.profile-intro-icon{
+    padding-right: 10px;
+    color: var(--color-primary);
+    position: relative;
+    top: 5px;
+}
+
+.profileAbout p span{
+    color: var(--color-primary-variant);
+    font-weight: bolder;
+}
+
+.profile-achievements{
+    max-width: 25%;
+    margin-left: auto;
+    text-align: left;
+}
+
+.badges{
+    width: 20%;
+    padding:0 10px;
+}
+
+.profile-experience{
+    border: 1px solid rgb(76, 75, 75);
+    border-radius: 10px;
+    padding: 0 10px 10px;  
+}
+
+.profile-experience-card{
+    background-color: #FFFF;
+    padding:5px 20px;
+    border-radius: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    margin-bottom: 15px;
+}

@@ -45,7 +45,8 @@
     left:70%;
     width: 40%;
     height: 100%;
-    background: rgba(39, 40, 41, 0.05);
+    border-left: 1px solid black;
+    background: rgba(27, 27, 27, 0.1);
     pointer-events: none;
     transform: skewX(-15deg);
 }
