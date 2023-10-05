@@ -1,0 +1,88 @@
+.communication {
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+.chatting {
+    padding: 1rem;
+    position: relative;
+    text-align: left;
+}
+.chatting img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.chatting .top-bar {
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    color: green;
+}
+.chatting .about-info {
+    font-size: 0.9rem;
+    color: green;
+    margin: 0.2rem;
+}
+.input-wrapper {
+    margin-top: auto;
+    display: flex;
+    gap: 1rem;
+}
+.input-wrapper input {
+    width: 100%;
+    height: 30px;
+    border-radius: 14px;
+}
+.input-wrapper button {
+    background-color: #007bff;
+    color: white;
+    border-radius: 14px;
+    padding: 0.5rem 0.7rem;
+}
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .message {
+    max-width: 70%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .chat-messages {
+    padding: 0 0.8rem 1rem;
+    display: flex;
+    height: 220px;
+    flex-direction: column;
+    align-items: flex-start; /* Align messages on the left side */
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #007bff #f0f0f0;
+  }
+  /* User message style */
+  .user {
+    align-self: flex-end; 
+    background-color: #007bff; 
+    color: white;
+    margin-bottom: 5px; 
+    border-radius: 10px; 
+    padding: 10px;
+  }
+  
+  /* Bot message style */
+  .bot {
+    align-self: flex-start; 
+    background-color: #f0f0f0;
+    color: #333; 
+    margin-bottom: 5px; 
+    border-radius: 10px; 
+    padding: 10px; 
+  }

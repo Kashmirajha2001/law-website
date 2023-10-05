@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import Nav from "../Navbar/Nav";
 import Intro from "../Intro/Intro";
 import Footer from "../Footer/Footer";
@@ -19,7 +19,7 @@ const LegalProfile = () => {
     <>
       <Intro />
       <Nav />
-      <div div className="LegalProfile">
+      <div className="LegalProfile">
         <div className="profileIntro">
           <div className="profile-image">
             <img src={adminProfile} alt="attorneys Image" />
