@@ -33,10 +33,11 @@
   padding: 1rem 5rem;
   text-align: center;
   cursor: pointer;
+  transition: all 0.3s;
 }
 
 .professionals-card:hover {
-  box-shadow: var(--color-primary-variant) 0px 30px 20px, var(--color-primary-variant) 0px -12px 30px, var(--color-primary-variant) 0px 4px 6px, var(--color-primary-variant) 0px 12px 13px, var(--color-primary-variant) 0px -3px 5px;
+  box-shadow: var(--color-primary-variant) 0px 20px 30px -10px;
   transform: scale(1.08);
 }
 

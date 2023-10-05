@@ -81,3 +81,26 @@
     margin-left: auto;
     max-width: 25%;
 }
+
+.communication-wrapper {
+  position: fixed;
+  top: 15rem;
+  right: 34%;
+  width: 500px;
+  height: 400px;
+}
+.close-chat {
+  position: absolute;
+  z-index: 20;
+  color: red;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  right: 0;
+  margin: 0.5rem;
+  transition: all 0.3s;
+}
+.close-chat:hover {
+  cursor: pointer;
+  color: rgb(99, 9, 9);
+}
