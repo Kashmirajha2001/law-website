@@ -11,8 +11,10 @@ import Typography from '@mui/material/Typography';
 import BasicDetails from './BasicDetails';
 import Details_2 from './Details_2';
 import Review from './Review';
+import Designation from './Designation';
 import Nav from '../Navbar/Nav';
 import Intro from '../Intro/Intro';
+import './signup.css';
 
 function Copyright() {
   return (
@@ -27,15 +29,17 @@ function Copyright() {
   );
 }
 
-const steps = ['Basic Details', 'Verification', 'Confirm SignUp'];
+const steps = ['Basic Details','Designation', 'Verification', 'Confirm SignUp'];
 
 function getStepContent(step) {
   switch (step) {
     case 0:
       return <BasicDetails />;
     case 1:
-      return <Details_2 />;
+      return <Designation />;
     case 2:
+        return <Details_2 />;
+    case 3:
       return <Review />;
     default:
       throw new Error('Unknown step');
@@ -55,10 +59,9 @@ export default function SignUp() {
 
   return (
     <React.Fragment>
-      {/* <CssBaseline /> */}
       <Intro />
       <Nav/>
-      <Container component="main" maxWidth="sm" sx={{ mb: 4 }}>
+      <Container component="main" maxWidth="md" sx={{ mb: 4 }} className='signup'>
         <Paper variant="outlined" sx={{ my: { xs: 3, md: 6 }, p: { xs: 2, md: 3 } }}>
           <Typography component="h1" variant="h4" align="center">
             Sign Up
@@ -91,13 +94,14 @@ export default function SignUp() {
                   </Button>
                 )}
 
-                <Button
+                <button
                   variant="contained"
                   onClick={handleNext}
-                  sx={{ mt: 3, ml: 1 }}
+                  // sx={{ mt: 3, ml: 1 }}
+                  className='btnSignup'
                 >
                   {activeStep === steps.length - 1 ? 'Confirm SignUp' : 'Next'}
-                </Button>
+                </button>
               </Box>
             </React.Fragment>
           )}

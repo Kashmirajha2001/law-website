@@ -1,0 +1,58 @@
+.aboutlogo{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.aboutlogo img{
+    width: 5rem;
+    height: 5rem;
+    /* background: rgba(255, 68, 0, 0.442); */
+    border-radius: 50%;
+}
+
+.aboutlogo h2{
+    padding-left: 6px;
+}
+
+.aboutlogo h2 span{
+    color: var(--color-primary);
+}
+
+.aboutHome{
+    border-radius: 50%;
+    position: absolute;
+    margin-left: 85%;
+}
+
+.developerTeam{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.developerTeamMembers{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.member{
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.member img{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+}
+
+.member div p{
+    text-align: center;
+    font-weight: 600;
+}
