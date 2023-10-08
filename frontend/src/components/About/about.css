@@ -40,6 +40,7 @@
 }
 
 .member{
+    margin: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,4 +50,9 @@
     width: 5rem;
     height: 5rem;
     border-radius: 50%;
+}
+
+.member div p{
+    text-align: center;
+    font-weight: 600;
 }

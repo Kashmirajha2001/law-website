@@ -31,7 +31,7 @@ const LegalProfile = () => {
               <Rating name="simple-controlled" defaultValue={4} />
               <span>456+ ratings</span>
             </div>
-            <p><WorkHistoryIcon className="profile-intro-icon"/>15 years of experience</p>
+            <p><WorkHistoryIcon className="profile-intro-icon"/>20 years of experience</p>
             <p><LocationOnIcon className="profile-intro-icon"/>Kolkata</p>
             <p><GTranslateIcon className="profile-intro-icon"/>Bengali, English, Hindi</p>
           </div>

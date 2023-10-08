@@ -6,6 +6,12 @@ import Fade from "@mui/material/Fade";
 import Typography from "@mui/material/Typography";
 import { useNavigate } from "react-router-dom";
 import img from "../../assets/logo.png";
+import adnan from "../../assets/about/adnan.png";
+import kashmira from "../../assets/about/kashmira.png";
+import kriti from "../../assets/about/kriti.jpg";
+import manish from "../../assets/about/manish.png";
+import pranjal from "../../assets/about/pranjal.png";
+import suvro from "../../assets/about/suvro.png";
 import "./about.css";
 import HomeIcon from '@mui/icons-material/Home';
 
@@ -77,28 +83,30 @@ export default function TransitionsModal() {
               <h2>Our Developer Team</h2>
               <div className="developerTeamMembers">
                 <div className="member">
-                  <img src={img}></img>
-                  <h3>Pranjal Sarkar</h3>
+                  <img src={pranjal}></img>
+                  <div>
+                    <p>Pranjal Sarkar</p>
+                  </div>
                 </div>
                 <div className="member">
-                  <img src={img}></img>
-                  <h3>Suvrojit Chowdhury</h3>
+                  <img src={suvro}></img>
+                  <div><p>Suvrojit Chowdhury</p></div>
                 </div>
                 <div className="member">
-                  <img src={img}></img>
-                  <h3>Kashmira Jha</h3>
+                  <img src={kashmira}></img>
+                  <div><p>Kashmira Jha</p></div>
                 </div>
                 <div className="member">
-                  <img src={img}></img>
-                  <h3>Manish Dutta</h3>
+                  <img src={manish}></img>
+                  <div><p>Manish Dutta</p></div>
                 </div>
                 <div className="member">
-                  <img src={img}></img>
-                  <h3>Adnan Sameer</h3>
+                  <img src={adnan}></img>
+                  <div><p>Adnan Sameer</p></div>
                 </div>
                 <div className="member">
-                  <img src={img}></img>
-                  <h3>Kriti Priya</h3>
+                  <img src={kriti}></img>
+                  <div><p>Kriti Priya</p></div>
                 </div>
               </div>
             </div>
