@@ -11,6 +11,7 @@ import LegalProfile from './components/LegalProfile/LegalProfile';
 import Contact from './components/Contact/Contact';
 import CommunityChat from './components/Community/CommunityChat';
 import ScrollToTop from './ScrollToTop'
+import Expert from "./components/Dashboard/Expert";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="/LegalProfile" element={<LegalProfile />} />
           <Route path="/Contact" element={<Contact />} />
           <Route path="/CommunityChat" element={<CommunityChat />} />
+          <Route path="/dashboard" element={<Expert />} />
           <Route path="*" element={<div>Error</div>} />
         </Routes>
       </BrowserRouter>

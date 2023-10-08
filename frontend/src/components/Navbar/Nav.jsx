@@ -37,6 +37,10 @@ const Nav = () => {
     navigate("/Contact");
   };
 
+  const navigateToDashboard = () => {
+    navigate("/dashboard");
+  };
+
   return (
     <nav className="navbar">
       <div className="container">
@@ -68,9 +72,9 @@ const Nav = () => {
               <a onClick={navigateToContact}>Contact Us</a>
             </li>
             {storedCredentials ? (
-              <li style={{ left:"60%"}}>
-                <a><img img className="profile-img" src={adminImg} alt="admin.png"/></a>
-                <a style={{ position:"absolute", top:"20%"}}>Admin</a>
+              <li style={{ left:"60%"}} onClick={navigateToDashboard}>
+                <a><img className="profile-img" src={adminImg} alt="admin.png"/></a>
+                <a style={{ position:"absolute", top:"20%"}}>Adnan</a>
               </li>
             ) : (
                 <li>
