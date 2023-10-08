@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 import img from "../../assets/logo.png";
 import adnan from "../../assets/about/adnan.png";
 import kashmira from "../../assets/about/kashmira.png";
-import kriti from "../../assets/about/kriti.jpg";
+import kriti from "../../assets/about/kriti.jpeg";
 import manish from "../../assets/about/manish.png";
 import pranjal from "../../assets/about/pranjal.png";
 import suvro from "../../assets/about/suvro.png";
