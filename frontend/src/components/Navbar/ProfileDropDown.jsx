@@ -18,7 +18,7 @@ const DropDown = () => {
         </li>
         <div className="horizontal-line"></div>
         <li>
-          <a onClick={()=>localStorage.clear()}><LogoutIcon style={{position:"relative", top:"8px", paddingRight:"10px"}}/>Logout</a>
+          <a onClick={handleLogout}>Logout<LogoutIcon style={{position:"relative", top:"8px", paddingRight:"10px"}}/>Logout</a>
         </li>
         <li></li>
       </div>
