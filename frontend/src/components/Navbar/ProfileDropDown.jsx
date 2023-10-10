@@ -23,7 +23,7 @@ const DropDown = () => {
         </li>
         <div className="horizontal-line"></div>
         <li>
-        <a onClick={handleLogout}><LogoutIcon style={{position:"relative", top:"8px", paddingRight:"10px"}}/>Logout</a>
+          <a onClick={handleLogout}><LogoutIcon style={{position:"relative", top:"8px", paddingRight:"10px"}}/>Logout</a>
         </li>
       </div>
     </div>
