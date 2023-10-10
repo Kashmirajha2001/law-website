@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import LogoutIcon from '@mui/icons-material/Logout';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 const DropDown = () => {
   const navigate = useNavigate();
@@ -18,7 +19,7 @@ const DropDown = () => {
     <div className="navProfileDropDownMenu">
       <div className="navProfileDropDown">
         <li>
-          <a onClick={navigateToDashboard}>Account</a>
+          <a onClick={navigateToDashboard}><AccountCircleIcon style={{position:"relative", top:"8px", paddingRight:"10px"}}/>Account</a>
         </li>
         <div className="horizontal-line"></div>
         <li>
