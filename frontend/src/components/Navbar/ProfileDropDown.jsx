@@ -8,6 +8,11 @@ const DropDown = () => {
     navigate("/dashboard");
   };
 
+  const handleLogout = () => {
+    localStorage.removeItem("credentials");
+    window.location.reload();
+  }
+
   return (
     <div className="navProfileDropDownMenu">
       <div className="navProfileDropDown">
@@ -16,7 +21,7 @@ const DropDown = () => {
         </li>
         <div className="horizontal-line"></div>
         <li>
-          <a onClick={()=>localStorage.clear()}>Logout</a>
+          <a onClick={handleLogout}>Logout</a>
         </li>
       </div>
     </div>

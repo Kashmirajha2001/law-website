@@ -97,17 +97,21 @@
   background-color: #574c4c;
 }
 
-.navDropDownMenu{
+.navDropDownMenu {
   position: relative;
+  top: 2rem;
 }
 
-.navProfileDropDownMenu{
+.navProfileDropDownMenu {
   position: absolute;
   right: 2.5rem;
 }
 
 .navDropDown{
-  width: 255px;
+  width: 265px;
+}
+.navDropDown li {
+  margin-top: 0.3rem;
 }
 .navDropDown, .navProfileDropDown{
   position: absolute;

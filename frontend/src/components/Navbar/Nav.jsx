@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React, useEffect, useState } from "react";
 import Hamburger from "../../assets/hamburger.svg";
 import "./nav.css";
 import DropDown from "./DropDown";
@@ -12,7 +12,6 @@ const Nav = () => {
   const [openDropDown, setOpenDropDown] = useState(false);
   const [openProfileDropDown, setOpenProfileDropDown] = useState(false);
   const storedCredentials = JSON.parse(localStorage.getItem("credentials"));
-
 
   const handleShowNavbar = () => {
     setShowNavbar(!showNavbar);
@@ -69,8 +68,8 @@ const Nav = () => {
               </li>
             ) : (
               <li>
-                  <a onClick={navigateToLogin}>login</a>
-                  <a onClick={navigateToSignUp}>SignUp</a>
+                  <a onClick={navigateToLogin}>Login</a>
+                  <a onClick={navigateToSignUp}>Sign Up</a>
                 </li>
             )}
           </ul>
