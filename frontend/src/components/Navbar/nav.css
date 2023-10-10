@@ -125,6 +125,10 @@
 .navDropDown li {
   margin-top: 0.3rem;
 }
+
+.navProfileDropDown{
+  width: 200px;
+}
 .navDropDown, .navProfileDropDown{
   position: absolute;
   flex-direction: column;
