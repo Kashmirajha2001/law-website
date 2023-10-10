@@ -3,12 +3,12 @@ import "./practiceAreas.css";
 
 const PracticeAreas = () => {
   return (
-    <div className="practiceContent">
+    <div className="practiceContent" id="services">
         <div className="headingPractice">
             <h1>Our Practice Areas</h1>
         </div>
         <div className="descPractice">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, reiciendis?</p>
+            <p>Discover tailored legal solutions across diverse domains. Our experienced team is dedicated to safeguarding your interests and providing expert counsel. Your legal needs, our expertise.</p>
         </div>
       <div className="about_cards">
         <div className="about_card">

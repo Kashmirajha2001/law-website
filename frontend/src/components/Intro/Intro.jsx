@@ -6,8 +6,14 @@ import img from "../../assets/logo.png";
 import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import { useNavigate } from 'react-router-dom';
 
 const Intro = () => {
+  const navigate = useNavigate()
+  const navigateToHome = () =>{
+    navigate("/")
+  };
+
   return (
     <>
       {/* <div className="intro1">
@@ -16,7 +22,7 @@ const Intro = () => {
         <a className="right" href="">Contact Us</a>
       </div> */}
       <div className="intro2">
-        <div className="logo">
+        <div className="logo" onClick={navigateToHome}>
           <img src={img}></img>
           <h2>e-nyaya<span>Seva</span></h2>
         </div>

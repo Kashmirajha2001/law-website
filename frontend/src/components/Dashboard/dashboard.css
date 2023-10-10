@@ -1,0 +1,35 @@
+.dashboard-content {
+    margin: 2rem;
+}
+.dashboard-content .admin-info {
+    display: flex;
+    gap: 2rem;
+}
+.dashboard-content img {
+    width: 9%;
+}
+.admin-info p {
+    font-size: 1rem;
+    font-weight: 500;
+}
+.admin-info .name-bio {
+    width: 90%;
+}
+.other-features {
+    margin: 2rem 6rem 2rem 2rem;
+}
+.other-features .card {
+    margin: 1rem 0rem;
+    padding: 1rem;
+    transition: all 0.3s;
+}
+.other-features .card:hover {
+    cursor: pointer;
+    color: white;
+    background-color: rgb(172, 171, 171);
+}
+.dashboard-content .privacy {
+    text-align: center;
+    color: grey;
+    margin: 2rem;
+}

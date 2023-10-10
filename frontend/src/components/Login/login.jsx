@@ -18,6 +18,7 @@ import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import IconButton from "@mui/material/IconButton";
 import "./login.css";
+import { useNavigate } from 'react-router-dom';
 // import img from "../../assets/carousel/c3.jpeg";
 
 function Copyright(props) {
@@ -50,6 +51,15 @@ export default function Login() {
       password: data.get("password"),
     });
   };
+  
+  React.useEffect(()=>{
+    localStorage.setItem("credentials", JSON.stringify(["admin@enaya.com", "admin"]));
+  },[])
+
+  const [email, setEmail] = React.useState('');
+  const [password, setPassword] = React.useState('');
+  const navigate = useNavigate();
+  const [errorMessage, setErrorMessage] = React.useState('');
 
   const [showPassword, setShowPassword] = React.useState(false);
 
@@ -57,6 +67,31 @@ export default function Login() {
 
   const handleMouseDownPassword = (event) => {
     event.preventDefault();
+  };
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  }
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  }
+
+  const handleLogin = () => {
+    const storedCredentials = JSON.parse(localStorage.getItem("credentials"));
+    if (storedCredentials) {
+      const storedEmail = storedCredentials[0];
+      const storedPassword = storedCredentials[1];    
+    
+      if(email === storedEmail && password === storedPassword) {
+        navigate("/");
+      }
+      else {
+        setErrorMessage("Email & password didn't match....");
+        setTimeout(()=> {
+          setErrorMessage('');
+        },1000);
+      }
+    }
   };
 
   return (
@@ -117,7 +152,8 @@ export default function Login() {
                   fullWidth
                   id="email"
                   label="Email Address"
-                  name="email"
+                  value={email}
+                  onChange={handleEmailChange}
                   autoComplete="email"
                   autoFocus
                   InputProps={{
@@ -133,8 +169,9 @@ export default function Login() {
                   margin="normal"
                   required
                   fullWidth
-                  name="password"
                   label="Password"
+                  value={password}
+                  onChange={handlePasswordChange}
                   id="password"
                   autoComplete="current-password"
                   InputProps={{
@@ -156,9 +193,10 @@ export default function Login() {
                   label="Remember me"
                 />
                 <div className="submit">
-                  <button type="submit" className="btn submitBtn">
+                  <button type="submit" className="btn submitBtn" onClick={handleLogin}>
                     Sign In
                   </button>
+                  <p style={{color:'red'}}>{errorMessage!='' ? errorMessage : ''}</p>
                 </div>
                 <Grid container>
                   <Grid item xs>
