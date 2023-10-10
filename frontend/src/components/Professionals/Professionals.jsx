@@ -49,10 +49,9 @@ const Professionals = () => {
         Our Expert <span>Attorneys</span>
       </h1>
       <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos ad
-        officia dolorem! Similique sapiente minima saepe non dolorem quibusdam
-        eum.
+      Welcome to Legal Justice, your ally in the pursuit of fairness. We offer expert guidance, resources, and insights to empower you in navigating the legal system effectively.
       </p>
+      <span>Your rights, our priority.</span>
       <div className="professionals-contents">
         {ProfessionalsData.map((Professionals, index) => (
           <div className="professionals-card" key={index} onClick={handleOpen}>

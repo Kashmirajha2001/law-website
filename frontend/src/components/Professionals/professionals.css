@@ -16,16 +16,24 @@
   letter-spacing: 2px;
   font-size: 2.5rem;
 }
+
 .professionals-feed-container h1 span {
   color: var(--color-primary-variant);
 }
+
+.professionals-feed-container span{
+  color: var(--color-primary-variant);
+  font-size:larger;
+  font-weight: 700;
+}
+
 .professionals-contents {
   margin: 1rem 0.5rem 4rem;
   display: flex;
   margin-top: 7rem;
 }
 .professionals-card {
-  height: 160px;
+  height: 180px;
   margin: 20px;
   background-color: #FFFF;
   border: 1px solid black;

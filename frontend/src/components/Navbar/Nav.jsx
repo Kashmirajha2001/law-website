@@ -1,12 +1,18 @@
 import { React, useState } from "react";
 import Hamburger from "../../assets/hamburger.svg";
 import "./nav.css";
+import DropDown from "./DropDown";
+import ProfileDropDown from "./ProfileDropDown";
 import { useNavigate } from "react-router-dom";
 import adminImg from "../../assets/images/adminProfile.png";
+import ListIcon from '@mui/icons-material/List';
 
 const Nav = () => {
   const [showNavbar, setShowNavbar] = useState(false);
+  const [openDropDown, setOpenDropDown] = useState(false);
+  const [openProfileDropDown, setOpenProfileDropDown] = useState(false);
   const storedCredentials = JSON.parse(localStorage.getItem("credentials"));
+
 
   const handleShowNavbar = () => {
     setShowNavbar(!showNavbar);
@@ -29,16 +35,8 @@ const Nav = () => {
     navigate("/");
   };
 
-  const navigateToCommunity = () => {
-    navigate("/Community");
-  };
-
   const navigateToContact = () => {
     navigate("/Contact");
-  };
-
-  const navigateToDashboard = () => {
-    navigate("/dashboard");
   };
 
   return (
@@ -56,32 +54,26 @@ const Nav = () => {
               <a onClick={navigateToAbout}>About Us</a>
             </li>
             <li>
-              <a href="#services">Services</a>
-            </li>
-            <li>
-              <a href="#news">News</a>
-            </li>
-            {storedCredentials ? (
-              <li>
-                <a onClick={navigateToCommunity}>Community</a>
-              </li>
-            ) : (
-              ""
-            )}
-            <li>
               <a onClick={navigateToContact}>Contact Us</a>
             </li>
+
+            <li onClick={()=>setOpenDropDown((prev)=> !prev)}>
+              <a style={{position:"absolute", top:"33%", left:"31.5%"}}>Menu</a><ListIcon style={{ height: "2rem", width: "2rem", color:"#FFFF", cursor:"pointer" }}/>
+            </li>
+            {openDropDown && <DropDown storedCredentials="true"/>}
+            
             {storedCredentials ? (
-              <li style={{ left:"60%"}} onClick={navigateToDashboard}>
+              <li style={{position:"relative", left:"150%"}} onClick={()=>setOpenProfileDropDown((prev)=> !prev)}>
                 <a><img className="profile-img" src={adminImg} alt="admin.png"/></a>
-                <a style={{ position:"absolute", top:"20%"}}>Adnan</a>
+                <a style={{ position:"absolute", top:"20%"}} >Adnan</a>
               </li>
             ) : (
-                <li>
+              <li>
                   <a onClick={navigateToLogin}>login</a>
                   <a onClick={navigateToSignUp}>SignUp</a>
                 </li>
             )}
+            {openProfileDropDown && <ProfileDropDown/>}
           </ul>
         </div>
       </div>

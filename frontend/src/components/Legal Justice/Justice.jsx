@@ -8,8 +8,7 @@ export const Justice = () => {
     <div className="justice-box">
       <h1>Welcome to Legal Justice</h1>
       <p>
-        Lorem ipsum generator is itelf <span>Adnan Sameer, bakwaas joke h</span>{" "}
-        hahaha lol so much
+      Get a profound understanding of the <span>rights and regulations</span> governing your domain and work environment.
       </p>
       <div className="law-card-grid">
         {lawsData.map((law, index) => (
