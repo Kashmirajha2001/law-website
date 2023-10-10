@@ -112,8 +112,8 @@
 .navDropDown, .navProfileDropDown{
   position: absolute;
   flex-direction: column;
-  top: 2rem;
-  right: 1.5rem;
+  top: 0rem;
+  right: 2rem;
   background: #FFFF;
   display: flex;
   align-items: flex-start;
@@ -133,6 +133,12 @@
   background-color: #FFFF;
   border-left: 1px solid black;
   border-top: 1px solid black;
+}
+.navProfileDropDown li {
+  list-style-type: none;
+  text-decoration: none;
+  margin: auto;
+  padding-top: 0.5rem;
 }
 
 .navDropDown li a, .navProfileDropDown li a{

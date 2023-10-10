@@ -73,8 +73,8 @@ const Nav = () => {
                   <a onClick={navigateToSignUp}>SignUp</a>
                 </li>
             )}
-            {openProfileDropDown && <ProfileDropDown/>}
           </ul>
+          {openProfileDropDown && <ProfileDropDown/>}
         </div>
       </div>
     </nav>

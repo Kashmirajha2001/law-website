@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import Intro from '../Intro/Intro'
 import Nav from '../Navbar/Nav'
 import adminImg from '../../assets/images/adminProfile.png'

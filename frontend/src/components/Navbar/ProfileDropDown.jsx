@@ -18,7 +18,6 @@ const DropDown = () => {
         <li>
           <a onClick={()=>localStorage.clear()}>Logout</a>
         </li>
-        <li></li>
       </div>
     </div>
   );
