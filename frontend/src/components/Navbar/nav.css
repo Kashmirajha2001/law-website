@@ -24,13 +24,25 @@
   content: '';
   position: absolute;
   top:0;
-  left:85%;
-  width: 100%;
+  right: 0;
+  width: 15%;
   height: 100%;
   background: var(--color-primary);
   pointer-events: none;
-  transform: skewX(-15deg);
+  transform: skew(-15deg);
+  transform-origin: top right;
   z-index: -1;
+}
+
+.navbar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 15%;
+  height: 100%;
+  background-color: var(--color-primary); 
+  z-index: -2;
 }
 
 .menu-icon {
@@ -97,17 +109,21 @@
   background-color: #574c4c;
 }
 
-.navDropDownMenu{
+.navDropDownMenu {
   position: relative;
+  top: 2rem;
 }
 
-.navProfileDropDownMenu{
+.navProfileDropDownMenu {
   position: absolute;
-  right: 2.5rem;
+  right: 6rem;
 }
 
 .navDropDown{
-  width: 255px;
+  width: 265px;
+}
+.navDropDown li {
+  margin-top: 0.3rem;
 }
 
 .navProfileDropDown{
@@ -116,8 +132,8 @@
 .navDropDown, .navProfileDropDown{
   position: absolute;
   flex-direction: column;
-  top: 2rem;
-  right: 1.5rem;
+  top: 0rem;
+  right: 2rem;
   background: #FFFF;
   display: flex;
   align-items: flex-start;
@@ -137,6 +153,12 @@
   background-color: #FFFF;
   border-left: 1px solid black;
   border-top: 1px solid black;
+}
+.navProfileDropDown li {
+  list-style-type: none;
+  text-decoration: none;
+  margin: auto;
+  padding-top: 0.5rem;
 }
 
 .navDropDown li a, .navProfileDropDown li a{

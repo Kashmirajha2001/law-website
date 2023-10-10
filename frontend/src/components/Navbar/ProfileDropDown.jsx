@@ -25,7 +25,6 @@ const DropDown = () => {
         <li>
           <a onClick={handleLogout}><LogoutIcon style={{position:"relative", top:"8px", paddingRight:"10px"}}/>Logout</a>
         </li>
-        <li></li>
       </div>
     </div>
   );
