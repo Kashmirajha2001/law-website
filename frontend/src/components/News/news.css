@@ -61,6 +61,7 @@
 .news-text {
   font-family: 'Newsreader', serif;
   color: #fff;
+  max-width: 93%;
 }
 
 .read-more {

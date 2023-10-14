@@ -73,3 +73,22 @@
 .btn a {
   color: #fff;
 }
+
+.professionalsBtn{
+  width: 100vw;
+  height: 40px;
+  background: rgb(255,69,0);
+  background: linear-gradient(90deg, rgba(255,69,0,1), rgba(198,103,62,1), rgb(249, 180, 150),white,rgba(255,69,0,1));
+  font-size: larger;
+  font-weight: 800;
+  cursor: pointer;
+  animation: 2s linear infinite animateButton;
+  background-size: 200%;
+}
+
+@keyframes animateButton{
+  0% {background-position: 100%;}
+  100%{
+    background-position: -100%;
+  }
+}

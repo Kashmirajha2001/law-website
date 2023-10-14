@@ -102,9 +102,9 @@ const Professionals = () => {
           </Fade>
         </Modal>
       </div>
-      <a className="btn" onClick={navigateToAttorneys}>
+      <button className="professionalsBtn" onClick={navigateToAttorneys}>
         Find legal Professionals
-      </a>
+      </button>
     </div>
   );
 };
