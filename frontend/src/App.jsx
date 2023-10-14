@@ -12,6 +12,7 @@ import Contact from './components/Contact/Contact';
 import CommunityChat from './components/Community/CommunityChat';
 import ScrollToTop from './ScrollToTop'
 import Expert from "./components/Dashboard/Expert";
+import SignUpProfessional from "./components/SignUp/SignUpProfessional";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route path="/Contact" element={<Contact />} />
           <Route path="/CommunityChat" element={<CommunityChat />} />
           <Route path="/dashboard" element={<Expert />} />
+          <Route path="/PSignUp" element={<SignUpProfessional/>} />
           <Route path="*" element={<div>Error</div>} />
         </Routes>
       </BrowserRouter>

@@ -10,10 +10,13 @@ import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
 import BasicDetails from './BasicDetails';
 import Details_2 from './Details_2';
+import { useNavigate } from "react-router-dom";
 import Review from './Review';
 import Designation from './Designation';
 import Nav from '../Navbar/Nav';
 import Intro from '../Intro/Intro';
+import ProfessionalImage from '../../assets/images/professionalImg.png';
+import ClientImage from '../../assets/images/clientImg.png';
 import './signup.css';
 
 function Copyright() {
@@ -29,25 +32,12 @@ function Copyright() {
   );
 }
 
-const steps = ['Basic Details','Designation', 'Verification', 'Confirm SignUp'];
 
-function getStepContent(step) {
-  switch (step) {
-    case 0:
-      return <BasicDetails />;
-    case 1:
-      return <Designation />;
-    case 2:
-        return <Details_2 />;
-    case 3:
-      return <Review />;
-    default:
-      throw new Error('Unknown step');
-  }
-}
 
 export default function SignUp() {
   const [activeStep, setActiveStep] = React.useState(0);
+  const navigate = useNavigate();
+  // const history = useHistory();
 
   const handleNext = () => {
     setActiveStep(activeStep + 1);
@@ -57,55 +47,25 @@ export default function SignUp() {
     setActiveStep(activeStep - 1);
   };
 
+  const navigateToProfessionalSignUp = () => {
+    navigate('/PSignUp');
+  }
+
   return (
     <React.Fragment>
       <Intro />
       <Nav/>
       <Container component="main" maxWidth="md" sx={{ mb: 4 }} className='signup'>
-        <Paper variant="outlined" sx={{ my: { xs: 3, md: 6 }, p: { xs: 2, md: 3 } }}>
-          <Typography component="h1" variant="h4" align="center">
-            Sign Up
-          </Typography>
-          <Stepper activeStep={activeStep} sx={{ pt: 3, pb: 5 }}>
-            {steps.map((label) => (
-              <Step key={label}>
-                <StepLabel>{label}</StepLabel>
-              </Step>
-            ))}
-          </Stepper>
-          {activeStep === steps.length ? (
-            <React.Fragment>
-              <Typography variant="h5" gutterBottom>
-                Thank you for Registration.
-              </Typography>
-              <Typography variant="subtitle1">
-                Please <Link href="./Login" variant="body2">
-                      {"Login"}
-                    </Link> to your account.
-              </Typography>
-            </React.Fragment>
-          ) : (
-            <React.Fragment>
-              {getStepContent(activeStep)}
-              <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
-                {activeStep !== 0 && (
-                  <Button onClick={handleBack} sx={{ mt: 3, ml: 1 }}>
-                    Back
-                  </Button>
-                )}
-
-                <button
-                  variant="contained"
-                  onClick={handleNext}
-                  // sx={{ mt: 3, ml: 1 }}
-                  className='btnSignup'
-                >
-                  {activeStep === steps.length - 1 ? 'Confirm SignUp' : 'Next'}
-                </button>
-              </Box>
-            </React.Fragment>
-          )}
-        </Paper>
+        <div className='signup-options' >
+          <div className='signup-option-div' onClick={navigateToProfessionalSignUp}>
+            <img src={ProfessionalImage} alt='Professional.png'/>
+            <h2>Legal Professional</h2>
+          </div>
+          <div className='signup-option-div signup-option-div_2' onClick={navigateToProfessionalSignUp}>
+            <img src={ClientImage} alt='Client.png'/>
+            <h2>Client</h2>
+          </div>
+        </div>
         <Copyright />
       </Container>
     </React.Fragment>
