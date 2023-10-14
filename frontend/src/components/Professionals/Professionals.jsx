@@ -46,7 +46,7 @@ const Professionals = () => {
   return (
     <div className="professionals-feed-container">
       <h1>
-        Our Expert <span>Attorneys</span>
+        Our Expert <span>legal Professionals</span>
       </h1>
       <p>
       Welcome to Legal Justice, your ally in the pursuit of fairness. We offer expert guidance, resources, and insights to empower you in navigating the legal system effectively.

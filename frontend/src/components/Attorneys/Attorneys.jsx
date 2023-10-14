@@ -37,13 +37,11 @@ const Community = () => {
       <Nav />
       <div className="attorneys-feed-container">
         <h1>
-          Our Expert <span>Attorneys</span>
+          Our Expert <span>legal Professionals</span>
         </h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos
-          ad officia dolorem! Similique sapiente minima saepe non dolorem
-          quibusdam eum.
-        </p>
+        A team of seasoned legal professionals, driven by a passion for justice and unwavering commitment to safeguarding your rights and interests.
+      </p>
         <a className="btn" onClick={showSidebar}>Show Filters</a>
         <div className="attorneys-contents">
           {AttorneysData.map((Professionals, index) => (
@@ -65,8 +63,7 @@ const Community = () => {
               <div className="skills">
                 <h2>Practice Areas & Skills</h2>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Facilis, eius.
+                  Agreements, Anticipatory Bail, Criminal Matter, Any legal Notice, Divorce.
                 </p>
                 <button className="btn" onClick={navigateToProfile}>Contact Now</button>
                 <button className="btn" style={{margin:'0 0 0 2rem'}} onClick={() => handleChatting(Professionals.id)}>Chat</button>

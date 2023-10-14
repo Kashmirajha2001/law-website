@@ -12,6 +12,7 @@ const predefinedMessages = {
   yes: 'Yes!',
   no: 'No!',
   maybe: 'Perhaps!',
+  ineedhelp:'How can I help you?',
   seeyoulater: 'See you later!',
   whatsup: 'Not much, just chatting. How about you?',
   howsgoing: "It's going well! How about you?",
